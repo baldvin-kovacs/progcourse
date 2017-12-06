@@ -20,10 +20,9 @@ között az a különbség, hogy az előbbi azonnal visszatér, csak
 kér egy callback-et, és ha elvégezte a feladatot, majd azt meghívja
 az eredménnyel.
 
-Javascript-ben hagyományosan így lehet callback-eket csinálni:
+Javascript-ben ezeken a módokon lehet callback-eket készíteni:
 
-```
-
+```javascript
 function foo1() {
   const n = 3;
   const cb1 = function(a, b) { return a + b + n; }
@@ -52,7 +51,7 @@ Akkor is használható, ha a closure futásának pillanatában az eredeti
 változó már rég nem él. Tehát pl. ha a `foo1` vagy a `foo3` visszaadja
 a `cb1`-et illetve a `cb3`-at a hívónak, akkor a visszaadás pillanatában
 a saját változói deallokálódnak --- kivéve azok, amelyekre őrződött meg
-referencia. Azokk tovább élnek a függvény befejeződése után is.
+referencia. Azok tovább élnek a függvény befejeződése után is.
 
 Fontos nagyon: nem érték capture-ölődik, hanem referencia az eredetire.
 Ez C++-ban nem így van, ott a lokális változók deallokálódnak a
@@ -86,9 +85,10 @@ Ezért a closure-készítés tipikus formája ez volt:
 cb = valami_mar_letezo_fuggveny.bind(this)
 ```
 
-Így lehetett megoldani, hogy egy objektum-metódus (merthogy objektumok
-vannak, csak még nem mutattam a szintaxist) az a futása alatt ugyanazt
-a this-t lássa, mint ahol a closure-t elkészítettük.
+Így lehetett megoldani, hogy egy objektum-metódusban készített closure
+(merthogy objektumok vannak, csak még nem mutattam a szintaxist) az a
+futása alatt ugyanazt a this-t lássa, mint ahol a closure-t
+elkészítettük.
 
 Na ez az, amit a `(paraméterek) => { kód }` szintaktika defaultból
 így csinál: az így készített closurehöz automatikusan bind-olva van
