@@ -100,7 +100,7 @@ tiltva, mert lényegében nincs alkalom, hogy tényleg azt gondolnád.
 
 ## 1. Feladat: Javascript+NodeJS Async API-val
 
-Írd át a következő NodeJS snippet-et úgy, hogy az async Node API-t
+Írd át a következő NodeJS programot úgy, hogy az async Node API-t
 használja:
 
 ```javascript
@@ -144,7 +144,7 @@ fájl neve, így a 2. lesz az első igazi paraméter.
 
 Ha készen van, akkor mindnféle fordítás nélkül a
 ```
-node titkosit-sync.js titkosit-sync.js
+node titkosit-async.js titkosit-async.js
 ```
 paranccsal tudnod kell futtatni. Ehhez nem kell semmiféle `npm` installt
 futtatni.
