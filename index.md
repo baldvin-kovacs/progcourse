@@ -3,6 +3,9 @@
 Minden fejezet gyakorlati, feladatokat ad. Mindent próbálj ki. Amíg ki nem
 próbáltad a dolgokat, addig nem tudod őket.
 
+Nagyon nyers a szöveg, ha valamit nem értesz,
+[készíts egy ticket-et](https://github.com/baldvin-kovacs/progcourse/issues/new)!
+
 Jó lesz bármilyen operációs rendszer, amin a NodeJS fut (Windows, Linux
 és Mac is). Tudnod kell egy parancssori környezetet használni. Jó esetben
 tudnod kell rekurzívan keresni.
