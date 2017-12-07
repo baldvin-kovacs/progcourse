@@ -98,8 +98,10 @@ Amióta ez a szintaktika létezik, azóta a styleguide-okban a
 `const cb = function(paraméterek) {kód}` szintaktika simán be van
 tiltva, mert lényegében nincs alkalom, hogy tényleg azt gondolnád.
 
-Feladat: a következő NodeJS snippet-et átírni az Async függvények
-használatára:
+## 1. Feladat: Javascript+NodeJS Async API-val
+
+Írd át a következő NodeJS snippet-et úgy, hogy az async Node API-t
+használja:
 
 ```javascript
 const process = require('process');
@@ -116,7 +118,7 @@ while (true) {
     const buf = new Uint8Array(1);
     const bytesRead = fs.readSync(fd, buf, 0, 1, null);
     if (bytesRead <= 0) {
-	break;
+		break;
     }
     const t = titkosit(buf[0]);
     const outBuf = Buffer.from([t]);
@@ -126,7 +128,7 @@ while (true) {
 
 Csak az `openSync` helyett kell `open`-t, és a `readSync` helyett
 `read`-et használni, a `titkosit` függvény maradhat a jelenlegi
-sync megoldás. Kérdés (beadandó): miért? Azaz, pontosabban: ha
+sync megoldás. Kérdés: miért? Azaz, pontosabban: ha
 már megkínlódunk a többi átírásával, miért nem írjuk át ezt is,
 ha azokat érdemes átírni, ezt miért nem?
 
@@ -139,5 +141,122 @@ https://nodejs.org/api/fs.html
 Használom a kódban a `process` modult is. Abban az egyetlen érdekesség:
 azért `argv[2]`, mert a 0. az maga az interpreter, az 1. a javascript
 fájl neve, így a 2. lesz az első igazi paraméter.
+
+Ha készen van, akkor mindnféle fordítás nélkül a
+```
+node titkosit-sync.js titkosit-sync.js
+```
+paranccsal tudnod kell futtatni. Ehhez nem kell semmiféle `npm` installt
+futtatni.
+
+## 2. Feladat: Typescript + NodeJS, Sync API
+
+Ehhez nyiss egy könyvtárat, és abban inicializáld a Typescript-et:
+```
+npm i typescript --save-dev
+```
+
+A `--save-dev` azt jelenti, hogy csak development dependencia lesz belőle.
+Nézz bele a `package.json`-ba, odatette. Létrehozott továbbá egy `node_modules/`
+könyvtárat is, abban is benne van.
+
+Ha tiszta lapot akarsz, akkor kitörölheted a `node_modules/` könyvtárat, egy
+sima, egyéb paraméterek nélküli `npm install` mindent visszatesz bele a
+`packages.json` alapján.
+
+Ahhoz, hogy Typescript kódból tudjuk a NodeJS API-ját használni, a Typescript
+compilernek szüksége van a NodeJS moduljainak a típusdeklarációira. Ehhez
+a `@types/node` csomagot kell feltennünk:
+```
+npm i @types/node
+```
+
+Nézz bele a `node_modules/@types/node/index.d.ts` fájlba. Keresd ki az `fs`
+modul deklarációját, csak érdekességképpen. Ezt a fájlt egyébként nem kell
+sehogy include-olnod, a Typescript compiler automatikusan include-ol
+mindent a `@types`-ból.
+
+Olvass el valamennyit a Typescript dokumentációjának az Modulokról szóló
+fejezetének az
+[import-okról szóló részéből](https://www.typescriptlang.org/docs/handbook/modules.html)!
+
+Látod majd, hogy többféle módon is lehet importálni, lehet a teljes `'fs'` modult,
+vagy csak bizonyos dolgokat belőle. Az
+
+```typescript
+import {openSync, readSync} from 'fs';
+```
+
+szintaktikának például működnie kell. Kísérletezhetsz másokkal is.
+
+A `titkosit` függvény deklarációjához típusokat kell tudnod adni.
+Nézz bele a Typescript dokumentációjának [függvényekről szóló részébe](https://www.typescriptlang.org/docs/handbook/functions.html),
+viszonylag az elején ott van, hogy hogyan kell.
+
+Fontos, hogy a belinkelt doksikból annyit olvass csak, amennyire
+szükséged van itt a feladat megoldásához (illetve olvashatsz többet is,
+de csak ha az nem veszélyezteti a feladat megoldását).
+
+A `titkosit` függvény `number` típust eszik, és `number`-t ad vissza,
+a Typescript-ben is csak az van, nincs egész szám típus.
+
+A `titkosit`-on kívül mást nem kell neked annotálni, minden mást a
+Typescript compiler kitalál a kontextusból.
+
+Szükséged van egy `tsconfig.json`-ra. Ennek két fontos eleme van,
+meg kell mondani a Typescript compilernek, hogy NodeJS-es modult
+fordítson (ezt `commonjs`-nek hívják), és hogy ne nézzen alá a
+`node_modules/` könyvtárnak:
+
+```json
+{
+    "compilerOptions": {
+        "target": "ES6",
+        "module": "commonjs"
+    },
+    "exclude": [
+        "node_modules"
+    ]
+}
+```
+
+Ha megírtad a `titkosit-sync.ts` programodat, ebben a könyvtárban, akkor
+a `./node_modules/.bin/tsc` parancsot kiadva tudod fordítani (paraméterek
+nélkül, defaultból minden `.ts` fájlt fordít).
+
+Az eredménynek a `.ts` fájl mellett kell megjelennie, `.js` kiterjesztéssel,
+és a `node titkosit-sync.js titkosit-sync.js` parancsnak működnie kell.
+
+## 3. Feladat: Typescript + NodeJS, ASync API
+
+Végül pedig írd meg Typescript-ben azt a megoldást, ami a NodeJS ASynd API-ját
+használja.
+
+Szükséged lesz néha arra, hogy a NodeJS függvényeinek a típusait tudd.
+Ehhez nyisd meg a `node_modules/@types/node/index.d.ts` fájlt valamilyen
+nézegetővel, és abban keresd ki. Ha például azt szeretnénk tudni, hogy
+az `fs.open` callback-je Typescript-ben milyen típusú, akkor kikeressük
+benne a `declare module "fs"` részt, abban az `open` típusdefinícióját,
+és ezt látjuk:
+
+```typescript
+/**
+     * Asynchronous open(2) - open and possibly create a file. If the file is created, its mode will be `0o666`.
+     * @param path A path to a file. If a URL is provided, it must use the `file:` protocol.
+     */
+    export function open(path: PathLike, flags: string | number, callback: (err: NodeJS.ErrnoException, fd: number) => void): void;
+```
+
+Látszik hát, hogy ha nem inline callback-et írunk, hanem szépen valahol függvényként,
+akkor annak így kell kinéznie:
+
+```typescript
+function openDone(err: NodeJS.ErrnoException, fd: number): void {
+    ...
+}
+```
+
+A lefordított `.js`-nek itt is a `.ts` mellett kell megjelennie, és
+`node titkosit-async.js titkosit-async.js` paranccsak működnie.
 
 
