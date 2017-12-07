@@ -168,7 +168,7 @@ Ahhoz, hogy Typescript kódból tudjuk a NodeJS API-ját használni, a Typescrip
 compilernek szüksége van a NodeJS moduljainak a típusdeklarációira. Ehhez
 a `@types/node` csomagot kell feltennünk:
 ```
-npm i @types/node
+npm i @types/node --save-dev
 ```
 
 Nézz bele a `node_modules/@types/node/index.d.ts` fájlba. Keresd ki az `fs`
@@ -176,9 +176,9 @@ modul deklarációját, csak érdekességképpen. Ezt a fájlt egyébként nem k
 sehogy include-olnod, a Typescript compiler automatikusan include-ol
 mindent a `@types`-ból.
 
-Olvass el valamennyit a Typescript dokumentációjának az Modulokról szóló
-fejezetének az
-[import-okról szóló részéből](https://www.typescriptlang.org/docs/handbook/modules.html)!
+Olvass el valamennyit a Typescript dokumentációjának a
+[Modulokról szóló fejezetének](https://www.typescriptlang.org/docs/handbook/modules.html)
+az import-okról szóló részéből!
 
 Látod majd, hogy többféle módon is lehet importálni, lehet a teljes `'fs'` modult,
 vagy csak bizonyos dolgokat belőle. Az
