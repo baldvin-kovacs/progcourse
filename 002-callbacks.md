@@ -113,14 +113,14 @@ function titkosit(num) {
 const fd = fs.openSync(process.argv[2], 'r');
 
 while (true) {
+    const buf = new Uint8Array(1);
     const bytesRead = fs.readSync(fd, buf, 0, 1, null);
     if (bytesRead <= 0) {
-		break;
+	break;
     }
-    const t = titkosit(buffer[0]);
+    const t = titkosit(buf[0]);
     const outBuf = Buffer.from([t]);
     process.stdout.write(outBuf.toString('binary'));
-    processOneChar(fd);
 }
 ```
 
