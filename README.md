@@ -6,7 +6,7 @@ Az [index.md](index.md) a tartalomjegyzék --- jó szórakozást!
 
 Nagyon nyers a szöveg, ha valamit nem értesz,
 [készíts egy ticket-et](https://github.com/baldvin-kovacs/progcourse/issues/new),
-igyekszem válaszolni, és ha olyan, akkor javítani a szöveget.
+igyekszem válaszolni, és ha olyan, akkor javítani.
 
 ***
 
