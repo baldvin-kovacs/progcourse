@@ -43,31 +43,32 @@ majd `npm install gulp --save-dev`.
 A `./node_modules/.bin/gulp` parancsnak működnie kell, és panaszkodnia,
 hogy nincs `gulpfile`.
 
-Készítsünk egyet. A Gulp konfigurációja egy sima Javascript fájl, amit
-induláskor végrehajt. A tetejére kell egy sor, amivel betöltjük a `gulp` modult:
+## A Gulp konfigurációs fájlja
+
+A Gulp egy `gulpfile.js` nevű fájlt hajt végre amikor elindul, ezt kell
+majd megírnunk.
+
+A [dokumentáció](https://github.com/gulpjs/gulp/blob/master/docs/API.md)
+szerint négy dolgot írhatunk bele, ezek:
+`gulp.src`, `gulp.dest`, `gulp.task` és a `gulp.watch`.
+
+Valójában a `gulpfile.js` egy sima Javascript fájl, bármi mást is
+írhatunk bele, ami NodeJS-ben értelmes.
+
+A tetejére kell egy sor, amivel betöltjük a `gulp` modult:
 
 ```javascript
 const gulp = require('gulp');
 ```
-
-Ezek után lehet a fájlban bármiféle NodeJS által érthető Javascript kód, nem
-csak ami a Gulp konfiguráció része. Akármi, csak fusson. Persze érdemes valahol
-megívnunk a Gulp konfigurációs függvényeket is, különben a Gulp a `gulpfile.js`
-lefuttatása után panaszkodik, hogy nem tudja, mit kell csinálni.
-
-A Gulp mindössze négy primitívet ad, ezek a `gulp.src`, `gulp.dest`,
-`gulp.task` és a `gulp.watch`.
-
-Ha bárhol a kódban meghívjuk a `gulp.task`-ot, akkor a Gulp memóriájába
-bekerül egy task, azzal a névvel és értelemmel, amilyen paramétereket
-a `gulp.task`-nak adtunk.
 
 Miután a Gulp lefuttatta a `gulpfile.js`-t, megnézi, hogy milyen task-ok
 kerültek a memóriájába, és végrehajtja vagy a `default` nevűt, vagy ha
 a felhasználó paraméterben másikat kért végrehajtani, akkor azt amit
 a felhasználó kért.
 
-Látjuk hát, hogy mi a cél:
+A `gulp.task` meghívásával tudjuk majd elérni, hogy task-ok kerüljenek
+a Gulp memóriájába. A fent belinkelt dokumentációból azt sejtjük, hogy
+valami ilyesmit kell majd írnunk:
 
 ```javascript
 const gulp = require('gulp');
