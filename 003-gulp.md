@@ -44,20 +44,11 @@ A `./node_modules/.bin/gulp` parancsnak működnie kell, és panaszkodnia,
 hogy nincs `gulpfile`.
 
 Készítsünk egyet. A Gulp konfigurációja egy sima Javascript fájl, amit
-induláskor végrehajt. A tetejére kell egy
+induláskor végrehajt. A tetejére kell egy sor, amivel betöltjük a `gulp` modult:
 
 ```javascript
 const gulp = require('gulp');
 ```
-
-Ennek a sornak a jelentése: a `gulp` nevű modult töltsd be, és a referenciáját
-tedd a `gulp` nevű változóba. Talán emlékszünk még, hogy Typescript-ben
-`import ...` volt a modulok betöltésének a szintaktikája. Javascript-ben
-létezik több versenyző szintaktika is, a `require(...)` csak egy a sok közül.
-Ez az, amit a NodeJS használ, és CommonJS modul rendszernek nevezik.
-
-Van valódi import szintaktika az ES6-ban, eléggé hasonló a Typescript-éhez,
-de azt a NodeJS nem támogatja.
 
 Ezek után lehet a fájlban bármiféle NodeJS által érthető Javascript kód, nem
 csak ami a Gulp konfiguráció része. Akármi, csak fusson. Persze érdemes valahol
