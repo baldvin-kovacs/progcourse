@@ -117,7 +117,7 @@ meg: [readable.pipe(destination\[, options])](https://nodejs.org/api/stream.html
 
 Ezt azt mondja, hogy valami `stream.Writable`-t kér. Írjunk hát egyet!
 
-## 1. Feladat - kiíratni, hogy mit kap a `valamiSajatCucc()`.
+### 1. Feladat - kiíratni, hogy mit kap a `valamiSajatCucc()`.
 
 Lejjebb, ott azon az oldalon van egy fejezet, amelyik megmutatja, hogy 
 [hogyan kell Writable-t írni](https://nodejs.org/api/stream.html#stream_implementing_a_writable_stream).
@@ -217,4 +217,6 @@ kell, hogy kapjunk:
 Nézz bele nyugodtan a [megoldásba](003-gulp/megoldas-01), utána csukd be, és próbáld
 újra, addig, amíg nem kapod a fenti eredményt.
 
-## 2. Feladat - a teljes objektumokat kiíratni
+## Debuggoláshoz alkalmas objektum-kiíratás a NodeJS-ben
+
+
