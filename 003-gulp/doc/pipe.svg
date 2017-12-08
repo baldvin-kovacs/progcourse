@@ -15,7 +15,10 @@
    version="1.1"
    id="svg8"
    inkscape:version="0.92+devel (da4e818f76, 2017-12-06)"
-   sodipodi:docname="pipe.svg">
+   sodipodi:docname="pipe.svg"
+   inkscape:export-filename="/Users/baldvin/progcourse/003-gulp/doc/pipe.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96">
   <defs
      id="defs2">
     <marker
@@ -137,30 +140,30 @@
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93888903px;font-family:'Roboto Mono';-inkscape-font-specification:'Roboto Mono, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458332">gulp.src(&quot;*.ts&quot;).pipe(valamiSajatCucc());</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:13.78634548px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.73855424"
-       x="-105.53115"
-       y="31.926741"
+       style="font-style:normal;font-weight:normal;font-size:15.79667187px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.8462503"
+       x="-120.91972"
+       y="30.724035"
        id="text823"
-       transform="matrix(0,-0.35824494,2.7913863,0,0,0)"><tspan
+       transform="matrix(0,-0.31265373,3.1984266,0,0,0)"><tspan
          sodipodi:role="line"
          id="tspan821"
-         x="-105.53115"
-         y="31.926741"
-         style="stroke-width:0.73855424">{</tspan></text>
+         x="-120.91972"
+         y="30.724035"
+         style="stroke-width:0.8462503">{</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:4.58611107px;line-height:1.25;font-family:Noteworthy;-inkscape-font-specification:'Noteworthy, Light';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#fa0000;fill-opacity:1;stroke:none;stroke-width:0.26458332;stroke-opacity:1"
-       x="14.552083"
-       y="43.793755"
+       x="17.991667"
+       y="43.529171"
        id="text827"><tspan
          sodipodi:role="line"
-         x="14.552083"
-         y="43.793755"
+         x="17.991667"
+         y="43.529171"
          style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:4.58611107px;font-family:Noteworthy;-inkscape-font-specification:'Noteworthy, Light';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#fa0000;fill-opacity:1;stroke:none;stroke-width:0.26458332;stroke-opacity:1"
          id="tspan829">Először lefut a gulp.src, és visszaad</tspan><tspan
          sodipodi:role="line"
-         x="14.552083"
-         y="49.526394"
+         x="17.991667"
+         y="49.26181"
          style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:4.58611107px;font-family:Noteworthy;-inkscape-font-specification:'Noteworthy, Light';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#fa0000;fill-opacity:1;stroke:none;stroke-width:0.26458332;stroke-opacity:1"
          id="tspan831">egy Readable stream objektumot:</tspan></text>
     <rect
@@ -172,7 +175,7 @@
        y="54.641666" />
     <path
        style="fill:none;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow2Lend)"
-       d="M 77.258333,36.385418 V 52.789584"
+       d="M 83.079166,36.385418 V 52.789584"
        id="path837"
        inkscape:connector-curvature="0" />
     <text
