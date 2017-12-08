@@ -2,7 +2,7 @@
 
 A [Gulp](https://github.com/gulpjs/gulp/blob/master/docs/API.md) egy
 igazán elterjedt program, amit nagyjából a `make` helyett használnak.
-Ebben a fejezetben a játszunk egy kicsit a Gulp-pal, mégpedig azért,
+Ebben a fejezetben játszunk egy kicsit a Gulp-pal, mégpedig azért,
 mert kulcsfontosságú a megértése ahhoz, hogy egy ismeretlen kódot
 látva megértsük, hogyan vannak benne összedrótozva a komponensek.
 
@@ -21,9 +21,10 @@ a `pug()`-ba, de mit pipe-ol bele, és miféle dolog az a `pug()`??
 
 A dokumentáció elvileg segít, de valójában eléggé elküld az erdőbe,
 mind a három link sok estés olvasmány:
-Returns a [stream](http://nodejs.org/api/stream.html) of [Vinyl files](https://github.com/gulpjs/vinyl-fs)
-that can be [piped](http://nodejs.org/api/stream.html#stream_readable_pipe_destination_options)
-to plugins.
+
+> Returns a [stream](http://nodejs.org/api/stream.html) of [Vinyl files](https://github.com/gulpjs/vinyl-fs)
+> that can be [piped](http://nodejs.org/api/stream.html#stream_readable_pipe_destination_options)
+> to plugins.
 
 Az első feladat, amit kitűzünk magunknak: próbáljuk ki, mit is
 pipe-ol a Gulp nekünk? Azaz, valami ilyesmit szeretnénk írni:
@@ -33,10 +34,10 @@ gulp.src('*.ts')
   .pipe(valamiSajatCucc())
 ```
 
-A `valamiSajatCucc()`-ot úgy akarjuk megírni, hogy dump-olja ki nekünk
-a terminálba amit a Gulp belepipe-olt.
+A `valamiSajatCucc()`-ot először primitívre készítjük, simán csak
+írja ki a képernyőre, hogy mit pipe-olt bele a `gulp.src`.
 
-Kezdjük! Nyissunk egy könyvtárat, benne `npm init`, Enter, Enter, stb,
+Nyissunk egy könyvtárat, benne `npm init`, Enter, Enter, stb,
 majd `npm install gulp --save-dev`.
 
 A `./node_modules/.bin/gulp` parancsnak működnie kell, és panaszkodnia,
@@ -56,9 +57,12 @@ létezik több versenyző szintaktika is, a `require(...)` csak egy a sok közü
 Ez az, amit a NodeJS használ, és CommonJS modul rendszernek nevezik.
 
 Van valódi import szintaktika az ES6-ban, eléggé hasonló a Typescript-éhez,
-de azt a NodeJS alapból nem támogatja.
+de azt a NodeJS nem támogatja.
 
-Ezek után lehet a fájlban bármiféle NodeJS által érthető Javascript kód.
+Ezek után lehet a fájlban bármiféle NodeJS által érthető Javascript kód, nem
+csak ami a Gulp konfiguráció része. Akármi, csak fusson. Persze érdemes valahol
+megívnunk a Gulp konfigurációs függvényeket is, különben a Gulp a `gulpfile.js`
+lefuttatása után panaszkodik, hogy nem tudja, mit kell csinálni.
 
 A Gulp mindössze négy primitívet ad, ezek a `gulp.src`, `gulp.dest`,
 `gulp.task` és a `gulp.watch`.
@@ -67,7 +71,7 @@ Ha bárhol a kódban meghívjuk a `gulp.task`-ot, akkor a Gulp memóriájába
 bekerül egy task, azzal a névvel és értelemmel, amilyen paramétereket
 a `gulp.task`-nak adtunk.
 
-Miután a Gulp lefuttatta a gulpfile.js-t, megnézi, hogy milyen task-ok
+Miután a Gulp lefuttatta a `gulpfile.js`-t, megnézi, hogy milyen task-ok
 kerültek a memóriájába, és végrehajtja vagy a `default` nevűt, vagy ha
 a felhasználó paraméterben másikat kért végrehajtani, akkor azt amit
 a felhasználó kért.
@@ -82,8 +86,8 @@ function valamiSajatCucc() {
 }
 
 gulp.task('default', () => {
-	gulp.src('*.ts')
-		.pipe(valamiSajatCucc())
+    gulp.src('*.ts')
+        .pipe(valamiSajatCucc())
 })
 ```
 
@@ -105,5 +109,7 @@ A valóságban ennél bonyolultabban működik, de nem sokkal. Kicsit kell is ho
 legyen, mert azt is meg akarhatjuk oldani, hogy a pipe-nak beadott "valami" az képes
 legyen átalakított, vagy akár más, újonnan gyártott objektumokat továbbadni.
 
+## NodeJS Stream-ek
 
+Nézzük csak a fenti 
 
