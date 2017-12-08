@@ -84,18 +84,9 @@ gulp.task('default', () => {
 ```
 
 Mi az a `.pipe`, hogy kell érteni azt a `gulp.src`-s két sort? Leegyszerűsítve
-működhetne például így:
+valahogy így:
 
-1. Meghívódik a `gulp.src(...)`, ami konstruál egy objektumot, és annak az objektumnak
-   mondjuk valami `.data` mezejébe betölti az összes `*.ts` fájlt, egy nagy tömbként,
-   minden elem mondjuk `{name: ..., content: ...}` alakú. A `gulp.src` függvény ezután
-   visszaadja ezt az objektumot. 
-2. A `gulp.src` olyan objektumot konstruált és adott vissza, amelybe nemcsakhogy
-   betöltötte az adatokat, de van neki egy `.pipe(valami)` metódusa. Ez a `.pipe(valami)` metódus
-   végigmegy a `.data` elemein, és ebbe a valamibe betáplálja őket, egyiket a
-   másik után.
-3. Miután kész, a `pipe()` is visszaadja ugyanazt a referenciát, amit ő kapott, hogy
-   további `pipe()`-okat lehessen hívni.
+![](003-gulp/doc/pipe.png)
    
 A valóságban ennél bonyolultabban működik, de nem sokkal. Kicsit kell is hogy bonyolultabb
 legyen, mert azt is meg akarhatjuk oldani, hogy a pipe-nak beadott "valami" az képes

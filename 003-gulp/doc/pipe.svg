@@ -1,0 +1,523 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="295.03238mm"
+   height="250.78847mm"
+   viewBox="0 0 295.03238 250.78847"
+   version="1.1"
+   id="svg8"
+   inkscape:version="0.92+devel (da4e818f76, 2017-12-06)"
+   sodipodi:docname="pipe.svg">
+  <defs
+     id="defs2">
+    <marker
+       inkscape:stockid="Arrow2Lend"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="marker3113"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         id="path3111"
+         style="fill:#42923b;fill-opacity:1;fill-rule:evenodd;stroke:#42923b;stroke-width:0.625;stroke-linejoin:round;stroke-opacity:1"
+         d="M 8.7185878,4.0337352 -2.2072895,0.01601326 8.7185884,-4.0017078 c -1.7454984,2.3720609 -1.7354408,5.6174519 -6e-7,8.035443 z"
+         transform="matrix(-1.1,0,0,-1.1,-1.1,0)"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow2Lend"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="marker1939"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         id="path1937"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.625;stroke-linejoin:round;stroke-opacity:1"
+         d="M 8.7185878,4.0337352 -2.2072895,0.01601326 8.7185884,-4.0017078 c -1.7454984,2.3720609 -1.7354408,5.6174519 -6e-7,8.035443 z"
+         transform="matrix(-1.1,0,0,-1.1,-1.1,0)"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       inkscape:isstock="true"
+       style="overflow:visible"
+       id="marker1198"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow2Lend"
+       inkscape:collect="always">
+      <path
+         transform="matrix(-1.1,0,0,-1.1,-1.1,0)"
+         d="M 8.7185878,4.0337352 -2.2072895,0.01601326 8.7185884,-4.0017078 c -1.7454984,2.3720609 -1.7354408,5.6174519 -6e-7,8.035443 z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.625;stroke-linejoin:round;stroke-opacity:1"
+         id="path1196"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow2Lend"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow2Lend"
+       style="overflow:visible"
+       inkscape:isstock="true"
+       inkscape:collect="always">
+      <path
+         id="path860"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.625;stroke-linejoin:round;stroke-opacity:1"
+         d="M 8.7185878,4.0337352 -2.2072895,0.01601326 8.7185884,-4.0017078 c -1.7454984,2.3720609 -1.7354408,5.6174519 -6e-7,8.035443 z"
+         transform="matrix(-1.1,0,0,-1.1,-1.1,0)"
+         inkscape:connector-curvature="0" />
+    </marker>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1"
+     inkscape:cx="343.65125"
+     inkscape:cy="315.19375"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     inkscape:document-rotation="0"
+     showgrid="false"
+     showborder="true"
+     inkscape:window-width="2560"
+     inkscape:window-height="1395"
+     inkscape:window-x="0"
+     inkscape:window-y="23"
+     inkscape:window-maximized="1"
+     inkscape:snap-global="false"
+     lock-margins="true"
+     fit-margin-top="15"
+     fit-margin-left="15"
+     fit-margin-right="15"
+     fit-margin-bottom="15" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0.30460101,-13.189876)">
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93888903px;line-height:1.25;font-family:'Roboto Mono';-inkscape-font-specification:'Roboto Mono, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="59.002079"
+       y="32.152081"
+       id="text819"><tspan
+         sodipodi:role="line"
+         id="tspan817"
+         x="59.002079"
+         y="32.152081"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93888903px;font-family:'Roboto Mono';-inkscape-font-specification:'Roboto Mono, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458332">gulp.src(&quot;*.ts&quot;).pipe(valamiSajatCucc());</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:13.78634548px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.73855424"
+       x="-105.53115"
+       y="31.926741"
+       id="text823"
+       transform="matrix(0,-0.35824494,2.7913863,0,0,0)"><tspan
+         sodipodi:role="line"
+         id="tspan821"
+         x="-105.53115"
+         y="31.926741"
+         style="stroke-width:0.73855424">{</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:4.58611107px;line-height:1.25;font-family:Noteworthy;-inkscape-font-specification:'Noteworthy, Light';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#fa0000;fill-opacity:1;stroke:none;stroke-width:0.26458332;stroke-opacity:1"
+       x="14.552083"
+       y="43.793755"
+       id="text827"><tspan
+         sodipodi:role="line"
+         x="14.552083"
+         y="43.793755"
+         style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:4.58611107px;font-family:Noteworthy;-inkscape-font-specification:'Noteworthy, Light';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#fa0000;fill-opacity:1;stroke:none;stroke-width:0.26458332;stroke-opacity:1"
+         id="tspan829">Először lefut a gulp.src, és visszaad</tspan><tspan
+         sodipodi:role="line"
+         x="14.552083"
+         y="49.526394"
+         style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:4.58611107px;font-family:Noteworthy;-inkscape-font-specification:'Noteworthy, Light';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#fa0000;fill-opacity:1;stroke:none;stroke-width:0.26458332;stroke-opacity:1"
+         id="tspan831">egy Readable stream objektumot:</tspan></text>
+    <rect
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.26499999;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect833"
+       width="86.254173"
+       height="33.337498"
+       x="56.356251"
+       y="54.641666" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow2Lend)"
+       d="M 77.258333,36.385418 V 52.789584"
+       id="path837"
+       inkscape:connector-curvature="0" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.88055563px;line-height:1.25;font-family:'Roboto Mono';-inkscape-font-specification:'Roboto Mono, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="59.002079"
+       y="60.727081"
+       id="text1123"><tspan
+         sodipodi:role="line"
+         id="tspan1121"
+         x="59.002079"
+         y="60.727081"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.88055563px;font-family:'Roboto Mono';-inkscape-font-specification:'Roboto Mono, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458332">Readable {</tspan><tspan
+         sodipodi:role="line"
+         x="59.002079"
+         y="65.577774"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.88055563px;font-family:'Roboto Mono';-inkscape-font-specification:'Roboto Mono, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458332"
+         id="tspan1125">   data: [</tspan><tspan
+         sodipodi:role="line"
+         x="59.002079"
+         y="70.428467"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.88055563px;font-family:'Roboto Mono';-inkscape-font-specification:'Roboto Mono, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458332"
+         id="tspan1139">     {name:'x.ts', content:'...'},</tspan><tspan
+         sodipodi:role="line"
+         x="59.002079"
+         y="75.279167"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.88055563px;font-family:'Roboto Mono';-inkscape-font-specification:'Roboto Mono, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458332"
+         id="tspan1141">     {name:'y.ts', content:'...'}</tspan><tspan
+         sodipodi:role="line"
+         x="59.002079"
+         y="80.12986"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.88055563px;font-family:'Roboto Mono';-inkscape-font-specification:'Roboto Mono, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458332"
+         id="tspan1137">   ]</tspan><tspan
+         sodipodi:role="line"
+         x="59.002079"
+         y="84.980553"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.88055563px;font-family:'Roboto Mono';-inkscape-font-specification:'Roboto Mono, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458332"
+         id="tspan1129">}</tspan></text>
+    <text
+       id="text1135"
+       y="87.18541"
+       x="143.13957"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93888903px;line-height:1.25;font-family:'Roboto Mono';-inkscape-font-specification:'Roboto Mono, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       xml:space="preserve"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93888903px;font-family:'Roboto Mono';-inkscape-font-specification:'Roboto Mono, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458332"
+         y="87.18541"
+         x="143.13957"
+         id="tspan1133"
+         sodipodi:role="line">.pipe(valamiSajatCucc());</tspan></text>
+    <rect
+       y="114.96667"
+       x="56.356251"
+       height="33.337498"
+       width="86.254173"
+       id="rect1162"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.26499999;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+    <text
+       id="text1176"
+       y="121.05209"
+       x="59.002079"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.88055563px;line-height:1.25;font-family:'Roboto Mono';-inkscape-font-specification:'Roboto Mono, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       xml:space="preserve"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.88055563px;font-family:'Roboto Mono';-inkscape-font-specification:'Roboto Mono, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458332"
+         y="121.05209"
+         x="59.002079"
+         id="tspan1164"
+         sodipodi:role="line">Readable {</tspan><tspan
+         id="tspan1166"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.88055563px;font-family:'Roboto Mono';-inkscape-font-specification:'Roboto Mono, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458332"
+         y="125.90279"
+         x="59.002079"
+         sodipodi:role="line">   data: [</tspan><tspan
+         id="tspan1168"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.88055563px;font-family:'Roboto Mono';-inkscape-font-specification:'Roboto Mono, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458332"
+         y="130.75348"
+         x="59.002079"
+         sodipodi:role="line">     {name:'x.ts', content:'...'},</tspan><tspan
+         id="tspan1170"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.88055563px;font-family:'Roboto Mono';-inkscape-font-specification:'Roboto Mono, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458332"
+         y="135.60417"
+         x="59.002079"
+         sodipodi:role="line">     {name:'y.ts', content:'...'}</tspan><tspan
+         id="tspan1172"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.88055563px;font-family:'Roboto Mono';-inkscape-font-specification:'Roboto Mono, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458332"
+         y="140.45486"
+         x="59.002079"
+         sodipodi:role="line">   ]</tspan><tspan
+         id="tspan1174"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.88055563px;font-family:'Roboto Mono';-inkscape-font-specification:'Roboto Mono, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458332"
+         y="145.30557"
+         x="59.002079"
+         sodipodi:role="line">}</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93888903px;line-height:1.25;font-family:'Roboto Mono';-inkscape-font-specification:'Roboto Mono, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="143.13957"
+       y="147.51041"
+       id="text1180"><tspan
+         sodipodi:role="line"
+         id="tspan1178"
+         x="143.13957"
+         y="147.51041"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93888903px;font-family:'Roboto Mono';-inkscape-font-specification:'Roboto Mono, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458332">.pipe(                 );</tspan></text>
+    <rect
+       style="fill:#f9ff14;fill-opacity:1;stroke:#000000;stroke-width:0.26499999;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect1182"
+       width="50.006256"
+       height="19.579157"
+       x="161.13126"
+       y="128.72499" />
+    <text
+       transform="matrix(0,-0.30414346,3.2879221,0,0,0)"
+       id="text1186"
+       y="61.451221"
+       x="-302.6387"
+       style="font-style:normal;font-weight:normal;font-size:16.23867989px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.86992931"
+       xml:space="preserve"><tspan
+         style="stroke-width:0.86992931"
+         y="61.451221"
+         x="-302.6387"
+         id="tspan1184"
+         sodipodi:role="line">{</tspan></text>
+    <path
+       inkscape:connector-curvature="0"
+       id="path1194"
+       d="M 186.00208,91.418751 V 126.07917"
+       style="fill:none;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#marker1198)"
+       sodipodi:nodetypes="cc" />
+    <text
+       id="text1729"
+       y="100.67918"
+       x="122.2375"
+       style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:4.58611107px;line-height:1.25;font-family:Noteworthy;-inkscape-font-specification:'Noteworthy, Light';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#fa0000;fill-opacity:1;stroke:none;stroke-width:0.26458332;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         id="tspan1727"
+         style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:4.58611107px;font-family:Noteworthy;-inkscape-font-specification:'Noteworthy, Light';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#fa0000;fill-opacity:1;stroke:none;stroke-width:0.26458332;stroke-opacity:1"
+         y="100.67918"
+         x="122.2375"
+         sodipodi:role="line">Kiértékelődik a valamiSajatCucc(),</tspan><tspan
+         style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:4.58611107px;font-family:Noteworthy;-inkscape-font-specification:'Noteworthy, Light';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#fa0000;fill-opacity:1;stroke:none;stroke-width:0.26458332;stroke-opacity:1"
+         y="106.41181"
+         x="122.2375"
+         sodipodi:role="line"
+         id="tspan1811">és visszaad egy Writable stream-et:</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:4.58611107px;line-height:1.25;font-family:Noteworthy;-inkscape-font-specification:'Noteworthy, Light';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#fa0000;fill-opacity:1;stroke:none;stroke-width:0.26458332;stroke-opacity:1"
+       x="189.44167"
+       y="112.05627"
+       id="text1817"><tspan
+         id="tspan1815"
+         sodipodi:role="line"
+         x="189.44167"
+         y="112.05627"
+         style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:4.58611107px;font-family:Noteworthy;-inkscape-font-specification:'Noteworthy, Light';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#fa0000;fill-opacity:1;stroke:none;stroke-width:0.26458332;stroke-opacity:1">Azért épp stream.Writable-t,</tspan><tspan
+         sodipodi:role="line"
+         x="189.44167"
+         y="117.7889"
+         style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:4.58611107px;font-family:Noteworthy;-inkscape-font-specification:'Noteworthy, Light';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#fa0000;fill-opacity:1;stroke:none;stroke-width:0.26458332;stroke-opacity:1"
+         id="tspan1821">mert olvastuk a doksiban, hogy a</tspan><tspan
+         sodipodi:role="line"
+         x="189.44167"
+         y="123.52155"
+         style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:4.58611107px;font-family:Noteworthy;-inkscape-font-specification:'Noteworthy, Light';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#fa0000;fill-opacity:1;stroke:none;stroke-width:0.26458332;stroke-opacity:1"
+         id="tspan1823">pipe-nak azt kell adni.</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.88055563px;line-height:1.25;font-family:'Roboto Mono';-inkscape-font-specification:'Roboto Mono, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="163.24791"
+       y="135.60419"
+       id="text1837"><tspan
+         sodipodi:role="line"
+         x="163.24791"
+         y="135.60419"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.88055563px;font-family:'Roboto Mono';-inkscape-font-specification:'Roboto Mono, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458332"
+         id="tspan1835">Writable {</tspan><tspan
+         sodipodi:role="line"
+         x="163.24791"
+         y="140.45488"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.88055563px;font-family:'Roboto Mono';-inkscape-font-specification:'Roboto Mono, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458332"
+         id="tspan1861">  ...</tspan><tspan
+         sodipodi:role="line"
+         x="163.24791"
+         y="145.30557"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.88055563px;font-family:'Roboto Mono';-inkscape-font-specification:'Roboto Mono, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458332"
+         id="tspan1865">}</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:29.49131966px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.57989216"
+       x="-927.22113"
+       y="31.770205"
+       id="text1933"
+       transform="matrix(0,-0.16746922,5.9712466,0,0,0)"><tspan
+         sodipodi:role="line"
+         id="tspan1931"
+         x="-927.22113"
+         y="31.770205"
+         style="stroke-width:1.57989216">{</tspan></text>
+    <path
+       sodipodi:nodetypes="cc"
+       style="fill:none;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#marker1939)"
+       d="m 137.31875,154.65417 v 63.76459"
+       id="path1935"
+       inkscape:connector-curvature="0" />
+    <rect
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.26499999;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect2811"
+       width="86.254173"
+       height="28.045843"
+       x="98.689583"
+       y="220.8" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.88055563px;line-height:1.25;font-family:'Roboto Mono';-inkscape-font-specification:'Roboto Mono, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="101.33541"
+       y="226.62085"
+       id="text2825"><tspan
+         sodipodi:role="line"
+         id="tspan2813"
+         x="101.33541"
+         y="226.62085"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.88055563px;font-family:'Roboto Mono';-inkscape-font-specification:'Roboto Mono, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458332">Readable {</tspan><tspan
+         sodipodi:role="line"
+         x="101.33541"
+         y="231.47154"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.88055563px;font-family:'Roboto Mono';-inkscape-font-specification:'Roboto Mono, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458332"
+         id="tspan2815">   data: [</tspan><tspan
+         sodipodi:role="line"
+         x="101.33541"
+         y="236.32224"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.88055563px;font-family:'Roboto Mono';-inkscape-font-specification:'Roboto Mono, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458332"
+         id="tspan2819">     ...</tspan><tspan
+         sodipodi:role="line"
+         x="101.33541"
+         y="241.17293"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.88055563px;font-family:'Roboto Mono';-inkscape-font-specification:'Roboto Mono, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458332"
+         id="tspan2821">   ]</tspan><tspan
+         sodipodi:role="line"
+         x="101.33541"
+         y="246.02362"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.88055563px;font-family:'Roboto Mono';-inkscape-font-specification:'Roboto Mono, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458332"
+         id="tspan2823">}</tspan></text>
+    <text
+       id="text2907"
+       y="161.79793"
+       x="139.17084"
+       style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:4.58611107px;line-height:1.25;font-family:Noteworthy;-inkscape-font-specification:'Noteworthy, Light';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#fa0000;fill-opacity:1;stroke:none;stroke-width:0.26458332;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         id="tspan2905"
+         style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:4.58611107px;font-family:Noteworthy;-inkscape-font-specification:'Noteworthy, Light';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#fa0000;fill-opacity:1;stroke:none;stroke-width:0.26458332;stroke-opacity:1"
+         y="161.79793"
+         x="139.17084"
+         sodipodi:role="line">A Readable-nek a pipe metódusa úgy van megírva, hogy</tspan><tspan
+         style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:4.58611107px;font-family:Noteworthy;-inkscape-font-specification:'Noteworthy, Light';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#fa0000;fill-opacity:1;stroke:none;stroke-width:0.26458332;stroke-opacity:1"
+         y="167.53056"
+         x="139.17084"
+         sodipodi:role="line"
+         id="tspan2914">a nagy sárga dobozként ábrázolt Writable-nek hívja meg</tspan><tspan
+         style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:4.58611107px;font-family:Noteworthy;-inkscape-font-specification:'Noteworthy, Light';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#fa0000;fill-opacity:1;stroke:none;stroke-width:0.26458332;stroke-opacity:1"
+         y="173.2632"
+         x="139.17084"
+         sodipodi:role="line"
+         id="tspan2916">a write(chunk, encoding, callback) metódusát, sorra minden</tspan><tspan
+         style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:4.58611107px;font-family:Noteworthy;-inkscape-font-specification:'Noteworthy, Light';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#fa0000;fill-opacity:1;stroke:none;stroke-width:0.26458332;stroke-opacity:1"
+         y="178.99585"
+         x="139.17084"
+         sodipodi:role="line"
+         id="tspan2918">data elemmel:</tspan></text>
+    <rect
+       y="181.64166"
+       x="139.43542"
+       height="4.4979076"
+       width="17.462515"
+       id="rect3064"
+       style="fill:#f9ff14;fill-opacity:1;stroke:#000000;stroke-width:0.26499999;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.88055563px;line-height:1.25;font-family:'Roboto Mono';-inkscape-font-specification:'Roboto Mono, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="157.16248"
+       y="185.61041"
+       id="text3068"><tspan
+         sodipodi:role="line"
+         id="tspan3066"
+         x="157.16248"
+         y="185.61041"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.88055563px;font-family:'Roboto Mono';-inkscape-font-specification:'Roboto Mono, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458332">.write({name:'x.ts', content:'...'}, null, callback);</tspan></text>
+    <rect
+       style="fill:#f9ff14;fill-opacity:1;stroke:#000000;stroke-width:0.26499999;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect3070"
+       width="17.462515"
+       height="4.4979076"
+       x="139.43542"
+       y="189.05" />
+    <text
+       id="text3074"
+       y="193.01875"
+       x="157.16248"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.88055563px;line-height:1.25;font-family:'Roboto Mono';-inkscape-font-specification:'Roboto Mono, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       xml:space="preserve"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.88055563px;font-family:'Roboto Mono';-inkscape-font-specification:'Roboto Mono, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458332"
+         y="193.01875"
+         x="157.16248"
+         id="tspan3072"
+         sodipodi:role="line">.write({name:'y.ts', content:'...'}, null, callback);</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:4.58611107px;line-height:1.25;font-family:Noteworthy;-inkscape-font-specification:'Noteworthy, Light';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#fa0000;fill-opacity:1;stroke:none;stroke-width:0.26458332;stroke-opacity:1"
+       x="36.777088"
+       y="204.13126"
+       id="text3084"><tspan
+         id="tspan3082"
+         sodipodi:role="line"
+         x="36.777088"
+         y="204.13126"
+         style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:4.58611107px;font-family:Noteworthy;-inkscape-font-specification:'Noteworthy, Light';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#fa0000;fill-opacity:1;stroke:none;stroke-width:0.26458332;stroke-opacity:1">A stream.Readable osztály pipe metódusa végül visszaad</tspan><tspan
+         sodipodi:role="line"
+         x="36.777088"
+         y="209.86389"
+         style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:4.58611107px;font-family:Noteworthy;-inkscape-font-specification:'Noteworthy, Light';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#fa0000;fill-opacity:1;stroke:none;stroke-width:0.26458332;stroke-opacity:1"
+         id="tspan3095">egy Readable-t (esetleg ugyanazt, aminek ő a metódusa),</tspan><tspan
+         sodipodi:role="line"
+         x="36.777088"
+         y="215.59653"
+         style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:4.58611107px;font-family:Noteworthy;-inkscape-font-specification:'Noteworthy, Light';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#fa0000;fill-opacity:1;stroke:none;stroke-width:0.26458332;stroke-opacity:1"
+         id="tspan3097">hogy lehessen további pipe-okat hívni:</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:4.58611107px;line-height:1.25;font-family:Noteworthy;-inkscape-font-specification:'Noteworthy, Light';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#42923b;fill-opacity:1;stroke:none;stroke-width:0.26458332;stroke-opacity:1"
+       x="170.92084"
+       y="207.30626"
+       id="text3103"><tspan
+         id="tspan3101"
+         sodipodi:role="line"
+         x="170.92084"
+         y="207.30626"
+         style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:4.58611107px;font-family:Noteworthy;-inkscape-font-specification:'Noteworthy, Light';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#42923b;fill-opacity:1;stroke:none;stroke-width:0.26458332;stroke-opacity:1">Nekünk ezt a write-ot kell majd megírnunk, a többi,</tspan><tspan
+         sodipodi:role="line"
+         x="170.92084"
+         y="213.03889"
+         style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:4.58611107px;font-family:Noteworthy;-inkscape-font-specification:'Noteworthy, Light';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#42923b;fill-opacity:1;stroke:none;stroke-width:0.26458332;stroke-opacity:1"
+         id="tspan3107">például a pipe, az már meg van írva, része a NodeJS-nek.</tspan></text>
+    <path
+       style="fill:none;stroke:#42923b;stroke-width:0.26499999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#marker3113)"
+       d="m 169.59791,201.75 -2.91041,-6.87917"
+       id="path3109"
+       inkscape:connector-curvature="0" />
+  </g>
+</svg>
