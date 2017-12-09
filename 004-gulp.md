@@ -1,4 +1,4 @@
-# 3 - Gulp, és NodeJS Stream-ek
+# 4 - Gulp, és NodeJS Stream-ek
 
 A [Gulp](https://github.com/gulpjs/gulp/blob/master/docs/API.md) egy
 igazán elterjedt program, amit nagyjából a `make` helyett használnak.
