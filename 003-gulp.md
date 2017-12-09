@@ -330,7 +330,7 @@ hozzáférni.
 A `Buffer` típusú tartalom például a `_contents` mezőben van, és az aláhúzás azt
 szokta jelenteni, hogy ez egy privát mező, valahogy máshogy juss hozzá az anyaghoz.
 
-Noha elvileg lehetséges a `node_modules/`-be letöltött csomagok forrását a `github`-on
+Noha elvileg lehetséges a `node_modules/`-ba letöltött csomagok forrását a `github`-on
 megkeresve végigkövetni, hogy mi történik, ebben az esetben érdemes most a
 dokumentációhoz fordulnunk, és ismét elővenni azt a mágikus mondatot a Gulp
 leírásából:
