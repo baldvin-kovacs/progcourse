@@ -138,9 +138,8 @@ Az egyszerűsített formátum valahogy így megy:
 function valamiSajatCucc() {
     return new Writable({
        midenfele: "ertek",
-       write(chunk, encoding, callback) {
+       write(...) {
           ...
-          callback();
        },
     }
 }
@@ -148,7 +147,7 @@ function valamiSajatCucc() {
 
 A dokumentációból nem nyilvánvaló, de elég a `_write`-ot megírni, a `_writev`-t nem kötelező.
 
-A doksiból látod, hogy a write-ot úgy kell írni, hogy három paramétert kapjon: a `chunk`,
+A doksiból látod, hogy a `write`-ot úgy kell írni, hogy három paramétert kapjon: a `chunk`,
 ami maga az adat, ki tudja milyen típussal, valami `encoding`, meg egy `callback`. Ne
 feledd a `callback`-et meghívni a végén:
 
