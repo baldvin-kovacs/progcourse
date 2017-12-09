@@ -127,7 +127,7 @@ A `gulpfile.js`-t valahogy így kell hát megírni:
 
 Használhatod a dokumentációban ajánlott "Simplified Construction" módszert is,
 azaz hogy származtatás nélkül egyszerűen csak konstruálsz egy példányt
-a `Writable`-ből, és a konstruktorban beadsz egy objektumot aminek van `write` metódusa. Vigyázz,
+a `Writable`-ből, és a konstruktornak beadsz egy objektumot aminek van `write` metódusa. Vigyázz,
 ha származtatsz, akkor `_write`, ha az egyszerűsített módszert használod, akkor `write` (ennek semmi
 mélyebb értelme nincs, úgy van megírva a NodeJS, hogy így kelljen csinálni, ez a "Simplified Construction"
 nem valami általános Javascript-es trükk.).
@@ -137,12 +137,16 @@ Az egyszerűsített formátum valahogy így megy:
 ```javascript
 function valamiSajatCucc() {
     return new Writable({
-       ...
+       midenfele: "ertek",
+       write(chunk, encoding, callback) {
+          ...
+          callback();
+       },
     }
 }
 ```
 
-A dokumentációból nem nyilvánvaló, de elég az `_write`-ot megírni, a `_writev`-t nem kötelező.
+A dokumentációból nem nyilvánvaló, de elég a `_write`-ot megírni, a `_writev`-t nem kötelező.
 
 A doksiból látod, hogy a write-ot úgy kell írni, hogy három paramétert kapjon: a `chunk`,
 ami maga az adat, ki tudja milyen típussal, valami `encoding`, meg egy `callback`. Ne
