@@ -158,7 +158,8 @@ console.log(fv(3, 4));
 Ez tulajdonképpen hajmeresztő, az a 25 ott "lóg" a függvény-objektumon. A függvény-objektum
 fontos része maga a kódja, de úgy látszik, szépen megférnek mellette más adattagok is.
 
-Fontos: ami ezután jön, azt semmiképpen sem kell tudnod innen megérteni. Főleg azért írom,
+Fontos: ami ezután jön az ES5-ről, azt semmiképpen sem kell tudnod innen megérteni. Lapozz azért lejjebb, mert a JSON-ról is lesz még ebben a fejezetben szó.
+Főleg azért írom,
 hogy lásd, kb. így néztek ki az ES6 előtti kódok. Sok leírás van a neten a prototípus-alapú
 Javascript osztály-orientációról, nézd meg őket, amikor épp szükséged van valaminek a pontosabb
 megértésére. Kis szerencsével neked soha nem kell ilyen kódot írnod.
