@@ -218,7 +218,7 @@ Alakul, de még mindig nem tudjuk, hogy miféle objektumok azok, amiket a `chunk
 kap a `write`, azaz hogy is néznek ki azok a dolgok, amik pipe-olódnak. A
 `console.log` nem igazán volt segítségünkre, a
 
-```javascript
+```
 <File "x.ts" <Buffer 61 6c 6d 61 0a>>
 <File "y.ts" <Buffer 6b 6f 72 74 65 0a>>
 ```
@@ -323,7 +323,7 @@ milyen file?
 
 ## A pipe-olt objektumok használata, ES6 propertyk
 
-Ennek ellenére, ez már rengeteget segít ahhoz, hogy dolgozni tudjunk az objektummal.
+Sokat léptünk előre afelé, hogy dolgozni tudjunk a pipe-olt objektummal.
 Látjuk, hogy mi minden van benne, csak nem látjuk, hogy pontosan hogyan lehetne
 hozzáférni.
 
