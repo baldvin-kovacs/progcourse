@@ -37,12 +37,6 @@ gulp.src('*.ts')
 A `valamiSajatCucc()`-ot először primitívre készítjük, simán csak
 írja ki a képernyőre, hogy mit pipe-olt bele a `gulp.src`.
 
-Nyissunk egy könyvtárat, benne `npm init`, Enter, Enter, stb,
-majd `npm install gulp --save-dev`.
-
-A `./node_modules/.bin/gulp` parancsnak működnie kell, és panaszkodnia,
-hogy nincs `gulpfile`.
-
 ## A Gulp konfigurációs fájlja
 
 A Gulp egy `gulpfile.js` nevű fájlt hajt végre amikor elindul, ezt kell
@@ -104,31 +98,38 @@ A [stream](http://nodejs.org/api/stream.html) link egy NodeJS, és nem egy Gulp-
 oldalra visz.
 
 Ne engedjünk a kisértésnek, ne olvassuk el az egészet, csak a `.pipe` dokumentációját keressük
-meg: [readable.pipe(destination\[, options])](https://nodejs.org/api/stream.html#stream_readable_pipe_destination_options).
+meg: [readable.pipe(destination\[, options\])](https://nodejs.org/api/stream.html#stream_readable_pipe_destination_options).
 
-Ezt azt mondja, hogy valami `stream.Writable`-t kér. Írjunk hát egyet!
+Ezt azt mondja, hogy a `.pipe(...)` függvény az első paraméterébe valami `stream.Writable`-t kér. Írjunk hát egyet!
 
 ### 1. Feladat - kiíratni, hogy mit kap a `valamiSajatCucc()`.
 
-Lejjebb, ott azon az oldalon van egy fejezet, amelyik megmutatja, hogy 
-[hogyan kell Writable-t írni](https://nodejs.org/api/stream.html#stream_implementing_a_writable_stream).
+Hozzunk létre egy könyvtárat, abban a szokásos `npm init`, majd `npm install gulp --save-dev`.
+Ha a `./node_modules/.bin/gulp` parancsot futtatjuk, akkor a Gulpnak el kell indulnia,
+és panaszkodnia kell, hogy nem találja a `gulpfile.js`-t.
 
-Használhatjuk azt a módszert is, hogy definiálunk egy saját osztályt, de azt is, amelyben csak
-meghívjuk a `Writable` konstruktorát a megfelelő opciókkal.
+Nyisd meg annak a leírását, hogy
+[hogyan kell saját `Writable`-t implementálni](https://nodejs.org/api/stream.html#stream_implementing_a_writable_stream).
 
-Ha saját osztályt csinálunk, az valahogy így megy majd:
+Találsz benne olyat, hogy
 
 ```javascript
-class Loggolo extends Writable {
-    ...
-}
-
-function valamiSajatCucc() {
-    return new Loggolo();
-}
+const { Writable } = require('stream');
 ```
 
-Ha viszont csak az egyszerűsitett formátumot használjuk, akkor persze így:
+Ez egy ES6-os szintaktika, azt jelenti, hogy a `Writable` változó legyen egyenlő a `require(...)`
+által visszaadott objektum `Writable` memberével. Ezt úgy hívják, hogy Destructuring Assignment,
+és érdemes olvasni róla [az MDN-en](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment).
+
+A `gulpfile.js`-t valahogy így kell hát megírni:
+
+![](003-gulp/doc/gulpfile-structure-sajat.png)
+
+Használhatod azt a módszert is, hogy származtatás nélkül egyszerűen csak konstruálsz egy példányt
+a `Writable`-ből, és a konstruktorban beadsz egy objektumot aminek van `write` metódusa. Vigyázz,
+ha származtatsz, akkor `_write`, ha az egyszerűsített módszert használod, akkor `write`.
+
+Az egyszerűsített formátum valahogy így megy:
 
 ```javascript
 function valamiSajatCucc() {
@@ -139,7 +140,6 @@ function valamiSajatCucc() {
 ```
 
 A dokumentációból nem nyilvánvaló, de elég az `_write`-ot megírni, a `_writev`-t nem kötelező.
-Továbbá fontos: ha a rövid formátumot használod, akkor nem kell aláhúzás.
 
 A doksiból látod, hogy a write-ot úgy kell írni, hogy három paramétert kapjon: a `chunk`,
 ami maga az adat, ki tudja milyen típussal, valami `encoding`, meg egy `callback`. Ne
@@ -152,8 +152,8 @@ _write(chunk, encoding, callback) {
 }
 ```
 
-Vedd észre továbbá, hogy az ES6-ban a metódusokat csak a nevükkel és a paramétereikkel
-adjuk meg, nem kell a `function`:
+Vedd észre továbbá, hogy az ES6-ban úgy készítünk osztálymetódusokat, hogy csak a nevüket,
+és a paramétereiket deklaráljuk, nem kell a `function`:
 
 ```javascript
 class Valami extends MasikValami {
@@ -182,8 +182,6 @@ class Loggolo extends Writable {
 	...ide jön a _writev
 }
 ```
-
-A `_writev`-ben írassuk ki a `chunk` paramétert `console.log`-gal.
 
 Készítsünk egy `x.ts` és egy `y.ts` nevű fájlt, hogy valamit találjon is a `gulp.src`:
 
