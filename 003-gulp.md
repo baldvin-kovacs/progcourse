@@ -214,4 +214,156 @@ Nézz bele nyugodtan a [megoldásba](003-gulp/megoldas-01), utána csukd be, és
 
 ## Debuggoláshoz alkalmas objektum-kiíratás a NodeJS-ben
 
+Alakul, de még mindig nem tudjuk, hogy miféle objektumok azok, amiket a `chunk`-ban
+kap a `write`, azaz hogy is néznek ki azok a dolgok, amik pipe-olódnak. A
+`console.log` nem igazán volt segítségünkre, a
 
+```javascript
+<File "x.ts" <Buffer 61 6c 6d 61 0a>>
+<File "y.ts" <Buffer 6b 6f 72 74 65 0a>>
+```
+
+nem mondja meg ezeknek az objektumoknak az osztályát, vagy hogy hogyan hívják a
+tagjaikat.
+
+A NodeJS API-jának a dokumentációját bányászva két módszert találunk
+arra, hogy egy objektumot igazán részletesen kiírassunk, az egyik
+a [`console.dir`](https://nodejs.org/api/console.html#console_console_dir_obj_options),
+a másik a
+[`util.inspect`](https://nodejs.org/api/util.html#util_util_inspect_object_options).
+
+A `console.dir` dokumentációjának van egy nagyon fontos mondata:
+_This function bypasses any custom inspect() function defined on obj._. Erre szükségünk
+lesz ahhoz, hogy teljes képet kapjunk az objektumainkról. Ha a `util.inspect`-et
+használjuk, akkor ehhez majd egy külön paramétert is meg kell adnunk, azt, hogy
+`customInspect: false`. Ennek az az értelme, hogy néhány objektumtípushoz a NodeJS-ben
+definiálva van valami speciális, egyszerűsített inspect formátum, és az inspect
+defaultból azt írja ki. Ez a speciális formátum azonban eltakarja azokat a részleteket,
+amelyekre a valódi működés megértéséhez szükségünk van.
+
+Íme a két csodafegyverünk:
+
+```javascript
+console.dir(valami_ismeretlen_objektum);
+```
+
+esetleg
+
+```javascript
+console.dir(valami_ismeretlen_objektum, {showHidden: true, depth: null, colors: true});
+```
+
+vagy ha szeretnénk valami label-t is tenni, hogy könnyebben megtaláljuk a log-ban, hogy
+mit micsoda írt ki:
+
+```javascript
+const util = require('util');
+
+console.log('az ismeretlen objektum:',
+            util.inspect(valami_ismeretlen_objektum, {customInspect: false}));
+```
+
+A `util.inspect`-nek is van egy csomó paramétere, például azok is, amelyeket a `console.dir`-hez
+mutattam, nézd meg a doksiban!
+
+### 2. Feladat - kiíratni részletesen, hogy milyen objektumok mennek át a pipe-on
+
+Az előző feladat `gulpfile.js`-ét írd át úgy, hogy a `chunk`-okat a fenti részletes
+módon nyomtassa ki.
+
+A `./node_modules/.bin/gulp` parancs eredménye most sokkal bőbeszédűbb lesz:
+
+```
+[15:53:15] Using gulpfile ~/progcourse/003-gulp/megoldas-02/gulpfile.js
+[15:53:15] Starting 'default'...
+[15:53:15] Finished 'default' after 4.25 ms
+chunk: File {
+  history: 
+   [ '/Users/baldvin/progcourse/003-gulp/megoldas-02/x.ts',
+     [length]: 1 ],
+  cwd: '/Users/baldvin/progcourse/003-gulp/megoldas-02',
+  base: '/Users/baldvin/progcourse/003-gulp/megoldas-02/',
+  stat: 
+   Stats {
+     dev: 16777220,
+     mode: 33188,
+     nlink: 1,
+     uid: 90419,
+     gid: 5000,
+     rdev: 0,
+     blksize: 4096,
+     ino: 12102364,
+     size: 5,
+     blocks: 8,
+     atimeMs: 1512831175000,
+     mtimeMs: 1512831174000,
+     ctimeMs: 1512831174000,
+     birthtimeMs: 1512831174000,
+     atime: 2017-12-09T14:52:55.000Z,
+     mtime: 2017-12-09T14:52:54.000Z,
+     ctime: 2017-12-09T14:52:54.000Z,
+     birthtime: 2017-12-09T14:52:54.000Z },
+  _contents: 
+   Buffer [
+     97,
+     108,
+     109,
+     97,
+     10,
+     [BYTES_PER_ELEMENT]: 1,
+     [length]: 5,
+     [byteLength]: 5,
+     [byteOffset]: 0,
+     [buffer]: ArrayBuffer { byteLength: 5 } ] }
+```
+
+Noha ez még mindig nem tökéletes, komolyabb küzdelmek nélkül nagyjából ennyit tudunk
+elérni. Nem tökéletes például hogy csak annyit mond, a `chunk` típusa: `File`. Na de
+milyen file?
+
+## A pipe-olt objektumok használata, ES6 propertyk
+
+Ennek ellenére, ez már rengeteget segít ahhoz, hogy dolgozni tudjunk az objektummal.
+Látjuk, hogy mi minden van benne, csak nem látjuk, hogy pontosan hogyan lehetne
+hozzáférni.
+
+A `Buffer` típusú tartalom például a `_contents` mezőben van, és az aláhúzás azt
+szokta jelenteni, hogy ez egy privát mező, valahogy máshogy juss hozzá az anyaghoz.
+
+Noha elvileg lehetséges a `node_modules/`-be letöltött csomagok forrását a `github`-on
+megkeresve végigkövetni, hogy mi történik, ebben az esetben érdemes most a
+dokumentációhoz fordulnunk, és ismét elővenni azt a mágikus mondatot a Gulp
+leírásából:
+
+> Returns a [stream](http://nodejs.org/api/stream.html) of [Vinyl files](https://github.com/gulpjs/vinyl-fs)
+> that can be [piped](http://nodejs.org/api/stream.html#stream_readable_pipe_destination_options)
+> to plugins.
+
+A második link valamilyen [Vinyl files](https://github.com/gulpjs/vinyl-fs) nevű
+varázslatot emleget. Vigyázz, mielőtt ráklikkelsz, olvasd el a következő bekezdést.
+
+A `vinyl-fs` leírására mutat a link. Ez ugyan nem nagyon hosszú, de nem is nagyon rövid,
+és neked egyáltalán nem ez kell, mert ez egy adapter. Mikhez adapter? Hát 'Vinyl'-ekhez.
+És igen, ezzel a linkkel indít a leírás, de nem biztos, hogy rögtön ráklikkeltél volna,
+ha nem szólok...
+
+No, ha eljutottál a [Vinyl](https://github.com/gulpjs/vinyl) leírásához,
+akkor látod, hogy milyen metódusai vannak, azaz mit is lehet egy ilyen `chunk`-kal
+kezdeni.
+
+Hogyan lehet a tartalomhoz hozzáférni? A dokumentációnak ez a releváns része:
+
+```
+file.contents:
+   Gets and sets the contents of the file.
+   ...
+```
+
+A "Gets and sets" azt jelenti, hogy ez egy ES6 property. Ezért van a dump-ban `_contents`,
+és nem `contents`, mert a valódi adat köré property getter és setter metódusokat írtak.
+(A getter-ekről és a setter-ekről [olvashatsz az MDN-en](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/get)).
+
+Szóval, hiába nincs a dump-ban `contents`, mégis azt kell használni, például ha a fájl méretére vagyunk
+kíváncsiak, a `chunk.contents.length` működik.
+
+### 3. Feladat - Írjunk egy gulpfile.js-t, ami összeadja a .ts fájlok karaktereinek számát
