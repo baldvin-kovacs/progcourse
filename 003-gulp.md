@@ -127,7 +127,8 @@ A `gulpfile.js`-t valahogy így kell hát megírni:
 
 Használhatod azt a módszert is, hogy származtatás nélkül egyszerűen csak konstruálsz egy példányt
 a `Writable`-ből, és a konstruktorban beadsz egy objektumot aminek van `write` metódusa. Vigyázz,
-ha származtatsz, akkor `_write`, ha az egyszerűsített módszert használod, akkor `write`.
+ha származtatsz, akkor `_write`, ha az egyszerűsített módszert használod, akkor `write` (ennek semmi
+mélyebb értelme nincs, úgy van megírva a NodeJS, hogy így kelljen csinálni).
 
 Az egyszerűsített formátum valahogy így megy:
 
@@ -152,8 +153,8 @@ _write(chunk, encoding, callback) {
 }
 ```
 
-Vedd észre továbbá, hogy az ES6-ban úgy készítünk osztálymetódusokat, hogy csak a nevüket,
-és a paramétereiket deklaráljuk, nem kell a `function`:
+Vedd észre továbbá, hogy az ES6-ban úgy készítünk osztálymetódusokat, hogy csak a nevüket
+és a paramétereiket írjuk le, nem kell a `function`:
 
 ```javascript
 class Valami extends MasikValami {
@@ -179,7 +180,7 @@ class Loggolo extends Writable {
       });
     }
 
-	...ide jön a _writev
+    ...ide jön a _writev
 }
 ```
 

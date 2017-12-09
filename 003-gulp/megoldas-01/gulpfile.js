@@ -13,7 +13,12 @@ class Loggolo extends Writable {
     }
 }
 
+function valamiSajatCucc() {
+    return new Loggolo();
+}
+
 gulp.task('default', () => {
     gulp.src('*.ts')
-	.pipe(new Loggolo())
-})
+	.pipe(valamiSajatCucc())
+});
+

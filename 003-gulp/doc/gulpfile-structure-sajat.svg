@@ -15,7 +15,10 @@
    version="1.1"
    id="svg3289"
    inkscape:version="0.92+devel (da4e818f76, 2017-12-06)"
-   sodipodi:docname="gulpfile-structure-sajat.svg">
+   sodipodi:docname="gulpfile-structure-sajat.svg"
+   inkscape:export-filename="/Users/baldvin/progcourse/003-gulp/doc/gulpfile-structure-sajat.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96">
   <defs
      id="defs3283">
     <marker
@@ -128,7 +131,7 @@
          x="46.113831"
          y="40.682915"
          style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:4.58611107px;font-family:Noteworthy;-inkscape-font-specification:'Noteworthy, Light';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#fa0000;fill-opacity:1;stroke:none;stroke-width:0.26458332;stroke-opacity:1"
-         id="tspan3895">noduljából. </tspan></text>
+         id="tspan3895">moduljából. </tspan></text>
     <path
        style="fill:none;stroke:#ff0505;stroke-width:0.26499999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow2Lend)"
        d="M 61.317187,28.910938 88.370832,23.288542"
