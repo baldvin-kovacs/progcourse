@@ -319,3 +319,54 @@ Szóval, hiába nincs a dump-ban `contents`, mégis azt kell használni, példá
 kíváncsiak, a `chunk.contents.length` működik.
 
 ### 3. Feladat - Írjunk egy gulpfile.js-t, ami összeadja a .ts fájlok karaktereinek számát
+
+Módosítsuk a `Loggolo` osztályunkat úgy, hogy a végén írja ki, hogy összesen hány karakter
+volt a feldolgozott `.ts` fájlokban. Nem fájlonként, hanem összeadva a hosszukat.
+
+Ehhez használjuk a származtatós módszert, ne a Simplified Construction-t.
+
+A `Loggolo` konstruktorában a `super` hívás után hozzunk létre egy mezőt, amiben majd
+gyűjtjük az összméretet:
+
+```javascript
+this.total = 0;
+```
+
+A `_write`-ban cseréljuk ki a debug kiíratást sima `console.log(chunk);`-ra, hogy
+jobban lássunk, és adjuk hozzá a `total` növelését:
+
+```javascript
+this.total += chunk.contents.length;
+```
+
+Ki kell továbbá íratnunk, ha megvan a végeredmény. A NodeJS stream-jeinek a `pipe()`
+függvénye úgy van megírva, hogy ha már nincs több adat, akkor megívja a `Writable`-ünk
+`_final(callback)` metódusát. Ebben kiírathatjuk az összméretet:
+
+```javascript
+_final(callback) {
+    console.log("a ts fájlok összmérete: ", this.total);
+    callback();
+}
+```
+
+Ne feledjünk létrehozni legalább két '.ts' fájlt:
+
+```bash
+echo alma > x.ts
+echo korte > y.ts
+```
+
+Kész, futtathatjuk a `./node_modules/.bin/gulp` parancsot, és valami ilyesmit kell kapnunk:
+
+```
+[19:19:10] Using gulpfile ~/progcourse/004-gulp/megoldas-03/gulpfile.js
+[19:19:10] Starting 'default'...
+[19:19:10] Finished 'default' after 4.27 ms
+<File "x.ts" <Buffer 61 6c 6d 61 0a>>
+<File "y.ts" <Buffer 6b 6f 72 74 65 0a>>
+a ts fájlok összmérete:  11
+```
+
+([☞ megoldás](004-gulp/megoldas-03))
+
