@@ -304,3 +304,145 @@ Ott belül éppen az előbb leírt prototype-alapú osztálydefiníció van.
 
 Az `inheritance.js` már egy kicsit hajmeresztőbb, nézz bele, de megérteni nem kell.
 
+## JSON - Javascript Object Notation
+
+A JSON olyasmi, mint a Javascript egyszerűsített objektum-definíciós formátuma,
+de nem ugyanaz!
+
+A következő valid Javascript, de nem valid JSON:
+
+```javascript
+{
+   datum: new Date(),
+   szam: 4,
+}
+```
+
+Három fő különbségre kell emlékeznünk:
+
+1. JSON-ban nem hagyhatjuk el az idézőjeleket a kulcsokból, tehat `"szam":` és nem `szam:`.
+2. JSON-ban tilos vesszőt tenni az utolsó adattag után, azaz `"szam": 4` és nem `"szam": 4,`.
+3. JSON-ban csak `string`, `number` típusok, `true` vagy `false` értékek, valamint `{...}` és
+   `[...]` használható értéknek. A `new Date()`-et nem értelmezi a JSON parser.
+   
+Valid JSON például a következő:
+
+```json
+{
+  szamok: [3, 4, 5, 6],
+  sikeres: true,
+  valami: {
+    x: 7
+  }
+}
+```
+
+### 2. Feladat: JSON fájl beolvasása NodeJS api-val, Javascript-ben
+
+Írjunk egy NodeJS-es Javascript programot, amelyik beolvas egy JSON fájlt, objektummá
+alakítja a tartalmat, majd megszámolja, hogy hány mezeje lett a létrejött Javascript
+objektumnak.
+
+Ha böngészgetjük a NodeJS `fs` moduljának a [dokumentációját](https://nodejs.org/dist/latest-v8.x/docs/api/fs.html),
+akkor találunk benne egy nagyon egyszerű fájl-beolvasó függvényt, a
+[`readFileSync`](https://nodejs.org/dist/latest-v8.x/docs/api/fs.html#fs_fs_readfilesync_path_options)-et.
+
+Használjuk ezt, most nem kell az Async api-val kínlódni.
+
+```javascript
+const fs = require('fs');
+const process = require('process');
+
+const tartalom = fs.readFileSync(process.argv[2], "utf8");
+console.log("tartalom:", tartalom);
+```
+
+A többi részét nem teljesen lövöm le, csak két kulcsot adok: a Javascript-ben van egy `JSON` nevű
+modul, annak is egy `JSON.parse(ide valami json string jön)` és egy `JSON.stringify(ide viszont ojjektum)`
+függvéne. Az előbbit használjuk arra, hogy a tartalomból Javascript objektumot csináljunk.
+
+Ha van egy objektumunk, mondjuk az a neve, hogy `parsed`, akkor az `Object.keys(parsed)` ad egy
+tömböt, amiben épp az objektum mezői vannak felsorolva.
+
+A tömböknek (array-eknek) pedig van `.length` property-je --- vigyázz, ez nem függvény, csak simán
+így megy:
+
+```javascript
+const x = [3, 7, 21];
+console.log(x.length);
+```
+
+A programhoz nem kell semmilyen npm modul, de kell egy input fájl, valami ilyesmi:
+
+```
+{
+    "szam": 4,
+    "szoveg": "alma",
+    "gyerekObjektum": {
+	"x": 4
+    }
+}
+```
+
+A `node readjson.js minta.json` parancsnak 3-at kell kiírnia, ha jól írtuk meg
+a kódot.
+
+
+### 3. Feladat: JSON fájl beolvasása NodeJS api-val, Typescript-ben
+
+No most pontosan ugyanezt, de Typescript-ben. Ez nagyon hasonló, és még unalmasnak
+is tűnhet, de gyakorlás nélkül nem lehet megtanulni zongorázni, írd be ezt is.
+
+Itt létre kell hozni a környezetet:
+
+```bash
+mkdir megoldas-03
+cd megoldas-03
+npm init
+npm install typescript --save-dev
+npm install @types/node --save-dev
+```
+
+Hozd létre a `tsconfig.json` fájlt, és ne feledd hogy a NodeJS miatt commonjs modul
+előállítását kell kérni a Typescript-től:
+
+```json
+{
+    "compilerOptions": {
+	"target": "ES6",
+	"module": "commonjs"
+    }
+}
+```
+
+Hozd létre megint a `minta.json` fájlt.
+
+Hozz létre egy `readjson.ts` programot. Ennek a kódja majdnem pontosan az előző
+feladat megoldása, csak Typescript-es szintaktikával kell a modulokat beimportálni.
+
+Kétféleképp is csinálhatod, vagy beimportálod a teljes modulokat:
+
+```typescript
+import * as fs from 'fs';
+import * as process from 'process';
+```
+
+Ekkor a maradék kódon semmit nem kell változtatni.
+
+Beimportálhatod csak azokat a dolgokat a modulokból, amiket akarsz is használni:
+
+```typescript
+import {readFileSync} from 'fs';
+import {argv} from 'process';
+```
+
+Ekkor a kódban `fs.readFileSync` helyett simán `readFileSync`-et, `process.argv`
+helyett pedig egyszerűen `argv`-t kell használni. Futásidőbeli, vagy fordított
+kód méretbeli különbség nincs a kettő között, szimpátia alapján dönthetsz.
+
+Fordítsd le, és futtasd az eredményként kapott `.js` fájlt:
+
+```bash
+./node_modules/.bin/tsc
+node readjson.js minta.json
+```
