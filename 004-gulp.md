@@ -125,14 +125,12 @@ A `gulpfile.js`-t valahogy így kell hát megírni:
 
 ![](004-gulp/doc/gulpfile-structure-sajat.png)
 
-Használhatod a dokumentációban ajánlott "Simplified Construction" módszert is,
-azaz hogy származtatás nélkül egyszerűen csak konstruálsz egy példányt
-a `Writable`-ből, és a konstruktornak beadsz egy objektumot aminek van `write` metódusa. Vigyázz,
-ha származtatsz, akkor `_write`, ha az egyszerűsített módszert használod, akkor `write` (ennek semmi
-mélyebb értelme nincs, úgy van megírva a NodeJS, hogy így kelljen csinálni, ez a "Simplified Construction"
-nem valami általános Javascript-es trükk.).
+Használhatod a dokumentációban ajánlott "Simplified Construction" módszert is, de a
+"pre-ES6"-ossal inkább ne foglalkozz.
 
-Az egyszerűsített formátum valahogy így megy:
+Ha a "Simplified construction"-t használsz, akkor ne készíts saját `Loggolo` osztályt, akkor
+egyszerűen a `valamiSajatCucc()` függvény törzsébe tedd bele, hogy konstruáljon egy `Writable`
+példányt:
 
 ```javascript
 function valamiSajatCucc() {
