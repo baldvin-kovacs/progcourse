@@ -320,8 +320,9 @@ kíváncsiak, a `chunk.contents.length` működik.
 
 ### 3. Feladat - Írjunk egy gulpfile.js-t, ami összeadja a .ts fájlok karaktereinek számát
 
-Módosítsuk a `Loggolo` osztályunkat úgy, hogy a végén írja ki, hogy összesen hány karakter
-volt a feldolgozott `.ts` fájlokban. Nem fájlonként, hanem összeadva a hosszukat.
+Módosítsuk a `Loggolo` osztályunkat úgy, hogy a task végrehajtásának a végén
+írja ki, hogy összesen hány karakter volt a feldolgozott `.ts` fájlokban. Nem
+fájlonként, hanem összeadva a hosszukat.
 
 Ehhez használjuk a származtatós módszert, ne a Simplified Construction-t.
 
@@ -333,13 +334,13 @@ this.total = 0;
 ```
 
 A `_write`-ban cseréljuk ki a debug kiíratást sima `console.log(chunk);`-ra, hogy
-jobban lássunk, és adjuk hozzá a `total` növelését:
+kisebb legyen a zaj, és adjuk hozzá a `total` növelését:
 
 ```javascript
 this.total += chunk.contents.length;
 ```
 
-Ki kell továbbá íratnunk, ha megvan a végeredmény. A NodeJS stream-jeinek a `pipe()`
+Ki kell továbbá íratnunk, ha megvan a végeredmény. A NodeJS stream-jeinek a `pipe(...)`
 függvénye úgy van megírva, hogy ha már nincs több adat, akkor megívja a `Writable`-ünk
 `_final(callback)` metódusát. Ebben kiírathatjuk az összméretet:
 
@@ -415,7 +416,7 @@ A `gulp.task` hívásában kell egy `gulp.dest`-is:
 ```javascript
 gulp.task('default', () => {
     gulp.src('lib/**/*.ts')
-	    .pipe(new Belyegzo())
+        .pipe(new Belyegzo())
         .pipe(gulp.dest('dist'));
 });
 ```
