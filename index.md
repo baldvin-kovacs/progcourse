@@ -52,7 +52,7 @@ rendszer felvillantása után a Typescript-es és az ES6-os szintaktikát nézz�
 meg. Megnézzük, hogy mi az a JSON, és beolvasunk egy JSON fájlt, Javascript-ben
 és Typescript-ben is.
 
-## [4 - Gulp](004-gulp.md)
+## [4 - Gulp, és NodeJS Stream-ek](004-gulp.md)
 
 A [Gulp](https://github.com/gulpjs/gulp/blob/master/docs/API.md) egy
 igazán elterjedt program, amit nagyjából a `make` helyett használnak.

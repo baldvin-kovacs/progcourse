@@ -80,7 +80,7 @@ gulp.task('default', () => {
 Mi az a `.pipe`, hogy kell érteni azt a `gulp.src`-s két sort? Leegyszerűsítve
 valahogy így:
 
-![](003-gulp/doc/pipe.png)
+![](004-gulp/doc/pipe.png)
    
 A valóságban ennél bonyolultabban működik, de nem sokkal. Kicsit kell is hogy bonyolultabb
 legyen, mert azt is meg akarhatjuk oldani, hogy a pipe-nak beadott "valami" az képes
@@ -123,7 +123,7 @@ Ez egy ES6-os szintaktika, azt jelenti, hogy a `Writable` változó legyen egyen
 
 A `gulpfile.js`-t valahogy így kell hát megírni:
 
-![](003-gulp/doc/gulpfile-structure-sajat.png)
+![](004-gulp/doc/gulpfile-structure-sajat.png)
 
 Használhatod a dokumentációban ajánlott "Simplified Construction" módszert is,
 azaz hogy származtatás nélkül egyszerűen csak konstruálsz egy példányt
@@ -200,16 +200,16 @@ Ha kész a program, akkor a `./node_modules/.bin/gulp` utasítással futtassuk. 
 kell, hogy kapjunk:
 
 ```bash
-~/progcourse/003-gulp/megoldas-01 % ./node_modules/.bin/gulp 
-[23:15:23] Using gulpfile ~/progcourse/003-gulp/megoldas-01/gulpfile.js
+~/progcourse/004-gulp/megoldas-01 % ./node_modules/.bin/gulp 
+[23:15:23] Using gulpfile ~/progcourse/004-gulp/megoldas-01/gulpfile.js
 [23:15:23] Starting 'default'...
 [23:15:23] Finished 'default' after 4.2 ms
 <File "x.ts" <Buffer 61 6c 6d 61 0a>>
 <File "y.ts" <Buffer 6b 6f 72 74 65 0a>>
-~/progcourse/003-gulp/megoldas-01 % 
+~/progcourse/004-gulp/megoldas-01 % 
 ```
 
-Nézz bele nyugodtan a [megoldásba](003-gulp/megoldas-01), utána csukd be, és próbáld
+Nézz bele nyugodtan a [megoldásba](004-gulp/megoldas-01), utána csukd be, és próbáld
 újra, addig, amíg nem kapod a fenti eredményt.
 
 ## Debuggoláshoz alkalmas objektum-kiíratás a NodeJS-ben
@@ -274,15 +274,15 @@ módon nyomtassa ki.
 A `./node_modules/.bin/gulp` parancs eredménye most sokkal bőbeszédűbb lesz:
 
 ```
-[15:53:15] Using gulpfile ~/progcourse/003-gulp/megoldas-02/gulpfile.js
+[15:53:15] Using gulpfile ~/progcourse/004-gulp/megoldas-02/gulpfile.js
 [15:53:15] Starting 'default'...
 [15:53:15] Finished 'default' after 4.25 ms
 chunk: File {
   history: 
-   [ '/Users/baldvin/progcourse/003-gulp/megoldas-02/x.ts',
+   [ '/Users/baldvin/progcourse/004-gulp/megoldas-02/x.ts',
      [length]: 1 ],
-  cwd: '/Users/baldvin/progcourse/003-gulp/megoldas-02',
-  base: '/Users/baldvin/progcourse/003-gulp/megoldas-02/',
+  cwd: '/Users/baldvin/progcourse/004-gulp/megoldas-02',
+  base: '/Users/baldvin/progcourse/004-gulp/megoldas-02/',
   stat: 
    Stats {
      dev: 16777220,
