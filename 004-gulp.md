@@ -385,11 +385,11 @@ A `Transform`-nak nem `write` metódust kell írni, hanem `transform` metódust.
 
 A `callback` hívása előtt tovább kell adnunk a chunk-ot: `this.push(chunk);`;
 
-A dátum kulturált kezeléséhez tároljuk el az osztályunk konstruktorában, hogy mennyi
-az idő (hogy egy pass minden fájljának ugyanaz legyen a bélyegzője):
+Az aktuális dátumot úgy kapjuk, ha egyszerűen paraméter nélkül meghívjuk a `Date`
+konstruktorát:
 
 ```javascript
-this.now = new Date();
+const now = new Date();
 ```
 
 A `Date` a [Javascript része](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date),
@@ -398,7 +398,7 @@ nem kell hozzá semmit importálni.
 A `transform` függvényben a `chunk` tartalmát át kell írnunk, valahogy így:
 
 ```javascript
-chunk.contents = new Buffer("// date: " + this.now.toISOString() + "\n" + chunk.contents);
+chunk.contents = new Buffer("// date: " + now.toISOString() + "\n" + chunk.contents);
 ```
 
 Tegyünk egy loggolást is bele:

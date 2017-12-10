@@ -6,11 +6,11 @@ class Belyegzo extends Transform {
 	super({
 		objectMode: true,
 	});
-	this.now = new Date();
     }
     _transform(chunk, encoding, callback) {
 	console.log("processing ", chunk.path);
-	chunk.contents = new Buffer("// date: " + this.now.toISOString() + "\n" + chunk.contents);
+	const now = new Date();
+	chunk.contents = new Buffer("// date: " + now.toISOString() + "\n" + chunk.contents);
 	this.push(chunk);
 	callback();
     }
