@@ -18,8 +18,8 @@ vagy röviden:
 const x = {};
 ```
 
-Az objektumokhoz mindenféle mezőket szabadon hozzáragaszthatunk, nem kell hogy
-előre egy típust hozzunk létre:
+Az objektumokhoz mindenféle mezőket szabadon hozzáragaszthatunk, nem kell
+előre egy típust létrehoznunk:
 
 ```javascript
 const x = {};
@@ -58,7 +58,7 @@ ha nincs, akkor a prototípus prototípusának, és így tovább.
 
 A `new Valami()` szintaktika elég trükkös, a következőt csinálja:
 
-1. Készít egy üres objektumot, úgy, hogy a prototípusa legyen a `Valami` prototípusa.
+1. Készít egy üres objektumot, és megteszi prototípusnak a `Valami` prototípusát.
 2. Lefuttatja a `Valami`-t, de úgy, hogy a `Valami`-n belül a `this` jelentse épp
    az újonnan készített objektumot.
 3. Visszaadja az új objektumot.
