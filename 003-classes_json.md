@@ -362,6 +362,9 @@ A többi részét nem teljesen lövöm le, csak két kulcsot adok: a Javascript-
 modul, annak is egy `JSON.parse(ide valami json string jön)` és egy `JSON.stringify(ide viszont ojjektum)`
 függvéne. Az előbbit használjuk arra, hogy a tartalomból Javascript objektumot csináljunk.
 
+A `JSON` modul annyira mélyen része a Javascript-nek, hogy nem kell beimportálni, csak úgy van és kész,
+lehet használni.
+
 Ha van egy objektumunk, mondjuk az a neve, hogy `parsed`, akkor az `Object.keys(parsed)` ad egy
 tömböt, amiben épp az objektum mezői vannak felsorolva.
 
