@@ -1,6 +1,132 @@
-# 3 Classes, Objects, JSON
+# 3 - Object, Classes, JSON
 
-## class az ES6-ban
+## Objektumok a Javascript-ben
+
+A Javascript-ben minden objektum. Mindig is az volt, a Javascript első változataitól
+kezdve. Van néhány primitív típus (`boolean`, `number`, `string`), minden más az
+`Object` leszármazottja.
+
+Egy új üres objektumot létrehozhatunk így:
+
+```
+const x = new Object();
+```
+
+vagy röviden:
+
+```
+const x = {};
+```
+
+Az objektumokhoz mindenféle mezőket szabadon hozzáragaszthatunk, nem kell hogy
+előre egy típust hozzunk létre:
+
+```javascript
+const x = {};
+x.valami = 7;
+x.masikValami = {};
+x.masikValami.y = 8;
+```
+
+Ugyanezt egyszerűsített szintaktikával így is írhatjuk:
+
+```javascript
+const x = {
+    valami: 7,
+    masikValami: {
+        y: 8,
+    },
+}
+```
+
+Az objektum mezőit elérhetjük `x.valami` vagy `x['valami']` szintaktikával is,
+a kettő ugyanazt jelenti.
+
+Minden objektumnak van egy `prototype` mezeje. Ez egy rejtett mező, a mezők
+egyszerű felsorolásakor nem jelenik meg, sőt, le sem tudjuk kérdezni egyszerű
+mező-hivatkozással. Az `x` prototípusát az `Object`-nek egy metódusával
+tudjuk lekérdezni, így:
+
+```javascript
+const prototipus = Object.getPrototypeOf(X)
+```
+
+Amikor egy objektum egy mezejére
+hivatkozunk, akkor a Javascript futtató először lekérdezi, hogy van-e ilyenje
+az objektumnak, ha nincs, akkor meg megnézi, hogy van-e a prototípus-objektumnak,
+ha nincs, akkor a prototípus prototípusának, és így tovább.
+
+A `new Valami()` szintaktika elég trükkös, a következőt csinálja:
+
+1. Készít egy üres objektumot, úgy, hogy a prototípusa legyen a `Valami` prototípusa.
+2. Lefuttatja a `Valami`-t, de úgy, hogy a `Valami`-n belül a `this` jelentse épp
+   az újonnan készített objektumot.
+3. Visszaadja az új objektumot.
+
+Látható, hogy a `Valami` egy függvény, konstruktorként használja a rendszer, mégis,
+osztályként viselkedik. És igen, az ES6 előtt nem is volt külön szintaktika arra,
+hogy osztályt készítsünk, függvényeket írtunk, és azok prototípusaihoz adogattunk
+metódusokat:
+
+```javascript
+function Valami() {
+    this.adat = 3;
+}
+
+Valami.prototype.kiirato = function() {
+    console.log("adat:", this.adat);
+}
+
+const v = new Valami();
+v.kiirato();
+```
+
+### 1. Feladat - Írassuk ki részletesen a fenti objektumainkat, és a prototípusokat
+
+Használjuk a NodeJS [`util.inspect`](https://nodejs.org/dist/latest-v8.x/docs/api/util.html#util_util_inspect_object_options)
+függvényét ahhoz, hogy egy egyszerű objektumot, annak prototípusát, valamint a fenti `Valami` egyik
+példányát kiírassuk.
+
+A fájlunknak valahogy így kell majd kinéznie:
+
+```javascript
+const util = import('util');
+
+Itt létrehozni egy egyszerű objektumot, mondjuk x névvel.
+
+console.log("*** x:", util.inspect(x, {customInspect: false, showHidden: true, depth: null, colors: true}));
+
+const xProto = Object.getPrototypeOf(x);
+
+Itt kiiratni az xProto-t is.
+
+Itt meg definialni a Valami osztalyt.
+Azt is kiiratni.
+Itt venni a prototipusat.
+Azt is kiiratni.
+```
+
+Ahhoz, hogy `util.inspect` mindenképp részletes, szép eredményt adjon, jó sok paramétert kell neki
+adnunk. Írhatunk egy függvényt hozzá:
+
+```javascript
+function dump(val) {
+    return util.inspect(val, {
+        customInspect: false,
+        showHidden: true,
+        depth: null,
+        colors: true});
+}
+```
+
+Nem kell még `npm init` sem, semmilyen modult nem használunk a NodeJS beépített `util` modulján
+kívül, úgyhogy `node debug_print.js` paranccsal futtathatjuk a kódunkat.
+
+## Classok az ES6-ban
+
+Az ES6-ban már vannak osztályok --- ezek syntactic sugarként vannak a nyelvben,
+de az eredeti olyan bonyolult volt, hogy igazán fontos syntactic sugarról van szó.
+Az érdekesség kedvéért a Typescript irányából közelítjük meg az ES6-os osztályokat.
 
 Készíts egy könyvtárat, inicializáld az npm-et, installáld a Typescript-et,
 ne feledkezz meg a `tsconfig.json` létrehozásáról (lásd az 1. fejezetben),
@@ -139,59 +265,9 @@ A modern style-guide-ok a `var` használatát egyszerűen megtiltják.
 
 ## ES5-ös osztályok
 
-A korábbi Javascript változatok is objektum-orientáltak, csak éppen nem volt meg bennük
-a `class` kulcsszó.
-
-Olyannyira objektumorientált volt a Javascript, mindig is, hogy maguk a függvények
-is objektumok voltak, és lehetett hozzájuk adattagokat biggyeszteni. Például így:
-
-```javascript
-function fv(a, b) {
-    return a + b;
-}
-
-fv.szelhamossag = 25;
-
-console.log(fv(3, 4));
-```
-
-Ez tulajdonképpen hajmeresztő, az a 25 ott "lóg" a függvény-objektumon. A függvény-objektum
-fontos része maga a kódja, de úgy látszik, szépen megférnek mellette más adattagok is.
-
-Fontos: ami ezután jön az ES5-ről, azt semmiképpen sem kell tudnod innen megérteni. Lapozz azért lejjebb, mert a JSON-ról is lesz még ebben a fejezetben szó.
-Főleg azért írom,
-hogy lásd, kb. így néztek ki az ES6 előtti kódok. Sok leírás van a neten a prototípus-alapú
-Javascript osztály-orientációról, nézd meg őket, amikor épp szükséged van valaminek a pontosabb
-megértésére. Kis szerencsével neked soha nem kell ilyen kódot írnod.
-
-A dolog tehát bonyolódik. Minden függvénynek (illetve, minden objektumnak) van egy prototípusa.
-Amikor egy member-re hivatkozunk a kódban, akkor a rendszer előbb megnézi, hogy annak az
-objektumnak van-e ilyenje, és ha nincs, akkor megnézi, hogy a protoípusnak van-e. A
-Protoípusnak van prototípusa, és így tovább, egész az `Object`-ig, ami mindennek az őse.
-
-Osztálymetódusokat a prototípusokon szokták létrehozni, valahogy így:
-
-```javascript
-var fv = function(a, b) {
-    this.x = a + b;
-}
-
-fv.prototype.osztalyMetodus = function() { return this.x + 25 };
-```
-
-Vedd észre, hogy `function fv(a, b) {...}` helyett `var fv = function(a, b) {...}` szerepel.
-A másik is működik, nem pontosan tudom, hogy miért a var-os alakot szokták használni, arra tippelek,
-hogy más láthatósági szabályok vonatkoznak a két formára.
-
-A `this` a függvényen belül egy speciális szó, azt jelenti: "ami ehhez a függvény objektumboz bind-olva van".
-
-Van egy kulcsszó, amelyik készít egy üres objektumot ugyanazzal a prototípussal, ami a függvény
-prototípusa, ezt az új objektumot bind-olja a függvényhez, és meghívja a függvényt. Ezt a kulcsszó
-a `new`. Azaz, a fenti osztálydefiníció után írhatjuk, hogy
-
-```javascript
-var peldany = new fv(3, 5);
-```
+A korábbi Javascript változatok a fenti "Objektumok a Javascriptben" fejezetben írtak
+szerint egy furcsa szintaktikával valósították meg az objektum-orientációt: konstruktorfüggvényeket
+kellett írni, és azok prototípus-objektumaira kellett ráaggatni a metódusokat.
 
 Ennek az egésznek könyvtárnyi irodalma, és legalább annyi buktatója van. Érdekességképpen nézzük
 meg, hogy `./node_modules/.bin/tsc --target es5`-tel fordítva hogy néz ki a `class_example.js`:
