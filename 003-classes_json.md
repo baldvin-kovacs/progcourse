@@ -329,10 +329,11 @@ Valid JSON például a következő:
 
 ```json
 {
-  szamok: [3, 4, 5, 6],
-  sikeres: true,
-  valami: {
-    x: 7
+  "szamok": [3, 4, 5, 6],
+  "sikeres": true,
+  "valami": {
+    "x": 7,
+    "y": "alma"
   }
 }
 ```
