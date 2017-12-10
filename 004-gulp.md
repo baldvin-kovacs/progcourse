@@ -370,3 +370,85 @@ a ts fájlok összmérete:  11
 
 ([☞ megoldás](004-gulp/megoldas-03))
 
+## Fájlok módosítása, és a módosított fájlok elmentése egy könyvtárba
+
+Írjunk egy olyan `gulpfile.js`-t, amelyik
+
+1. folyamatosan figyeli a `lib/` alkönyvtárban levő `.ts` kiterjesztésű fájlokat,
+2. elkészíti a másolatukat a `dist/` alkönyvtárba,
+3. de úgy, hogy eléjük biggyeszt egy `// date: 2017-12-10T18:50:13.624Z` kommentet az aktuális dátummal.
+
+A fő különbségek: nem `Writable`-t kell a `stream` modulból használni, hanem `Transform`-ot
+([itt a doksi](https://nodejs.org/api/stream.html#stream_implementing_a_transform_stream)).
+
+A `Transform`-nak nem `write` metódust kell írni, hanem `transform` metódust.
+
+A `callback` hívása előtt tovább kell adnunk a chunk-ot: `this.push(chunk);`;
+
+A dátum kulturált kezeléséhez tároljuk el az osztályunk konstruktorában, hogy mennyi
+az idő (hogy egy pass minden fájljának ugyanaz legyen a bélyegzője):
+
+```javascript
+this.now = new Date();
+```
+
+A `Date` a [Javascript része](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date),
+nem kell hozzá semmit importálni.
+
+A `transform` függvényben a `chunk` tartalmát át kell írnunk, valahogy így:
+
+```javascript
+chunk.contents = new Buffer("// date: " + this.now.toISOString() + "\n" + chunk.contents);
+```
+
+Tegyünk egy loggolást is bele:
+
+```javascript
+console.log("processing ", chunk.path);
+```
+
+A `Buffer` a [NodeJS része](https://nodejs.org/dist/latest-v8.x/docs/api/buffer.html), nem kell
+hozzá semmit importálni, még csak NodeJS modult sem.
+
+A `gulp.task` hívásában kell egy `gulp.dest`-is:
+
+```javascript
+gulp.task('default', () => {
+    gulp.src('lib/**/*.ts')
+	    .pipe(new Belyegzo())
+        .pipe(gulp.dest('dist'));
+});
+```
+
+Látható, hogy kiszedtem a kissé modoros `valamiSajatCucc()` indirekciót, simán csak konstruálunk
+egyet a saját `Belyegzo` osztályunkból.
+
+A `lib/**/*.ts` glob szintaktika azt jelenti, hogy "rekurzívan a lib alkönyvtáron belüli minden .ts fájl".
+A szintaktika pontos doksija [itt van](https://github.com/isaacs/node-glob), de szerintem nem fontos
+fejből tudni, elég tudni, hogy a `node-glob` kifejezésre kell keresni, ha kell valami.
+
+Végül meg kell oldanunk, hogy ha bármelyik `.ts` fájl változik a `lib/`-ben, akkor ez a task fusson
+le rögtön:
+
+```javascript
+gulp.watch('lib/**/*.ts', ['default']);
+```
+
+Kész. Indítsuk el a Gulpot egy terminálban: `./node_modules/.bin/gulp`. Ott ez fut és figyel,
+úgyhogy szükségünk lesz egy másik terminálra is ahhoz, hogy megváltoztassuk az egyik `.ts`
+fájlt:
+
+```bash
+echo almafa > ./lib/x.ts
+```
+
+Ha jól dolgoztunk, akkor a Gulp-ot futtató terminálban láttuk, hogy újra feldolgozta az összes
+bemeneti fájlt, és a `dist/` alkönyvtárban megtalálhatjuk a fájlok bélyegzett változatát.
+
+Ez a példa már nagyon-nagyon közel van ahhoz, ahogyan a Gulp-ot a valós életben használni szokták.
+Persze nem magában a `gulpfile.js`-ben szokás megírni a bonyolultabb transzformálókat, hanem
+csak beimportálni őket más modulokból. Például egy transzformálót ami lefordítja a `.ts` fájlokat
+`.js` fájlokká, egyet ami direkt olvashatatlanná teszi őket, egyet meg ami minél kisebb méretűre
+tömöríti őket.
+
+([☞ megoldás](004-gulp/megoldas-04))
