@@ -213,64 +213,13 @@ Nézz bele nyugodtan a [megoldásba](004-gulp/megoldas-01), utána csukd be, és
 ([☞ megoldás Simplified Construction-nel](004-gulp/megoldas-02-simplified-construction))
 
 
-## Debuggoláshoz alkalmas objektum-kiíratás a NodeJS-ben
-
-Alakul, de még mindig nem tudjuk, hogy miféle objektumok azok, amiket a `chunk`-ban
-kap a `write`, azaz hogy is néznek ki azok a dolgok, amik pipe-olódnak. A
-`console.log` nem igazán volt segítségünkre, a
-
-```
-<File "x.ts" <Buffer 61 6c 6d 61 0a>>
-<File "y.ts" <Buffer 6b 6f 72 74 65 0a>>
-```
-
-nem mondja meg ezeknek az objektumoknak az osztályát, vagy hogy hogyan hívják a
-tagjaikat.
-
-A NodeJS API-jának a dokumentációját bányászva két módszert találunk
-arra, hogy egy objektumot igazán részletesen kiírassunk, az egyik
-a [`console.dir`](https://nodejs.org/api/console.html#console_console_dir_obj_options),
-a másik a
-[`util.inspect`](https://nodejs.org/api/util.html#util_util_inspect_object_options).
-
-A `console.dir` dokumentációjának van egy nagyon fontos mondata:
-_This function bypasses any custom inspect() function defined on obj._. Erre szükségünk
-lesz ahhoz, hogy teljes képet kapjunk az objektumainkról. Ha a `util.inspect`-et
-használjuk, akkor ehhez majd egy külön paramétert is meg kell adnunk, azt, hogy
-`customInspect: false`. Ennek az az értelme, hogy néhány objektumtípushoz a NodeJS-ben
-definiálva van valami speciális, egyszerűsített inspect formátum, és az inspect
-defaultból azt írja ki. Ez a speciális formátum azonban eltakarja azokat a részleteket,
-amelyekre a valódi működés megértéséhez szükségünk van.
-
-Íme a két csodafegyverünk:
-
-```javascript
-console.dir(valami_ismeretlen_objektum);
-```
-
-esetleg
-
-```javascript
-console.dir(valami_ismeretlen_objektum, {showHidden: true, depth: null, colors: true});
-```
-
-vagy ha szeretnénk valami label-t is tenni, hogy könnyebben megtaláljuk a log-ban, hogy
-mit micsoda írt ki:
-
-```javascript
-const util = require('util');
-
-console.log('az ismeretlen objektum:',
-            util.inspect(valami_ismeretlen_objektum, {customInspect: false}));
-```
-
-A `util.inspect`-nek is van egy csomó paramétere, például azok is, amelyeket a `console.dir`-hez
-mutattam, nézd meg a doksiban!
-
 ### 2. Feladat - kiíratni részletesen, hogy milyen objektumok mennek át a pipe-on
 
 Az előző feladat `gulpfile.js`-ét írd át úgy, hogy a `chunk`-okat a fenti részletes
-módon nyomtassa ki.
+módon nyomtassa ki. Ehhez használd az előző fejezetben megismert `util.inspect`-et,
+vagy a `console.dir`-t. Ez utóbbi a `util.inspect`-et használja, és talán jobban
+jársz, ha te is, de ismerni érdemes a `console.dir`-t is, nézz bele a
+[dokumentációjába](https://nodejs.org/api/console.html#console_console_dir_obj_options).
 
 A `./node_modules/.bin/gulp` parancs eredménye most sokkal bőbeszédűbb lesz:
 
