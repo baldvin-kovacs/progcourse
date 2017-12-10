@@ -72,3 +72,5 @@ A tsc elő kellett hogy állítson egy `hello.js` nevű fájlt. Futtasd le:
 ```
 node hello.js
 ```
+
+([☞ megoldás](001-npm_nodejs_typescript/01-megoldas))

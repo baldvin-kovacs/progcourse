@@ -122,6 +122,8 @@ function dump(val) {
 Nem kell még `npm init` sem, semmilyen modult nem használunk a NodeJS beépített `util` modulján
 kívül, úgyhogy `node debug_print.js` paranccsal futtathatjuk a kódunkat.
 
+([☞ megoldás](003-classes_json/megoldas-01))
+
 ## Classok az ES6-ban
 
 Az ES6-ban már vannak osztályok --- ezek syntactic sugarként vannak a nyelvben,
@@ -131,6 +133,8 @@ Az érdekesség kedvéért a Typescript irányából közelítjük meg az ES6-os
 Készíts egy könyvtárat, inicializáld az npm-et, installáld a Typescript-et,
 ne feledkezz meg a `tsconfig.json` létrehozásáról (lásd az 1. fejezetben),
 és hozz létre egy `class_example.ts` nevű fájlt a következő tartalommal:
+
+([☞ példa](003-classes_json/pelda-classes_in_es6))
 
 ```typescript
 class Jarmu {
@@ -382,6 +386,7 @@ lehet a tartalma.
 A `node readjson.js minta.json` parancsnak 3-at kell kiírnia, ha jól írtuk meg
 a kódot.
 
+([☞ megoldás](003-classes_json/megoldas-02))
 
 ### 3. Feladat: JSON fájl beolvasása NodeJS api-val, Typescript-ben
 
@@ -441,3 +446,5 @@ Fordítsd le, és futtasd az eredményként kapott `.js` fájlt:
 ./node_modules/.bin/tsc
 node readjson.js minta.json
 ```
+
+([☞ megoldás](003-classes_json/megoldas-03))

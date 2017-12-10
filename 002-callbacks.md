@@ -103,6 +103,8 @@ tiltva, mert lényegében nincs alkalom, hogy tényleg azt gondolnád.
 Írd át a következő NodeJS programot úgy, hogy az async Node API-t
 használja:
 
+([☞ feladat](002-callbacks/feladat-01))
+
 ```javascript
 const process = require('process');
 const fs = require('fs');
@@ -148,6 +150,8 @@ node titkosit-async.js titkosit-async.js
 ```
 paranccsal tudnod kell futtatni. Ehhez nem kell semmiféle `npm` installt
 futtatni.
+
+([☞ megoldás](002-callbacks/megoldas-01))
 
 ## 2. Feladat: Typescript + NodeJS, Sync API
 
@@ -227,6 +231,8 @@ nélkül, defaultból minden `.ts` fájlt fordít).
 Az eredménynek a `.ts` fájl mellett kell megjelennie, `.js` kiterjesztéssel,
 és a `node titkosit-sync.js titkosit-sync.js` parancsnak működnie kell.
 
+([☞ megoldás](002-callbacks/megoldas-02))
+
 ## 3. Feladat: Typescript + NodeJS, ASync API
 
 Végül pedig írd meg Typescript-ben azt a megoldást, ami a NodeJS ASynd API-ját
@@ -259,4 +265,5 @@ function openDone(err: NodeJS.ErrnoException, fd: number): void {
 A lefordított `.js`-nek itt is a `.ts` mellett kell megjelennie, és
 `node titkosit-async.js titkosit-async.js` paranccsak működnie.
 
+([☞ megoldás](002-callbacks/megoldas-03))
 

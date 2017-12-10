@@ -210,6 +210,9 @@ kell, hogy kapjunk:
 Nézz bele nyugodtan a [megoldásba](004-gulp/megoldas-01), utána csukd be, és próbáld
 újra, addig, amíg nem kapod a fenti eredményt.
 
+([☞ megoldás Simplified Construction-nel](004-gulp/megoldas-02-simplified-construction))
+
+
 ## Debuggoláshoz alkalmas objektum-kiíratás a NodeJS-ben
 
 Alakul, de még mindig nem tudjuk, hogy miféle objektumok azok, amiket a `chunk`-ban
@@ -318,6 +321,8 @@ chunk: File {
 Noha ez még mindig nem tökéletes, komolyabb küzdelmek nélkül nagyjából ennyit tudunk
 elérni. Nem tökéletes például hogy csak annyit mond, a `chunk` típusa: `File`. Na de
 milyen file?
+
+([☞ megoldás](004-gulp/megoldas-02))
 
 ## A pipe-olt objektumok használata, ES6 propertyk
 
