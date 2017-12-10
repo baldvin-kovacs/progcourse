@@ -60,7 +60,10 @@ Ahhoz, hogy igazán értsük mi is az, kicsit el kell vele játszanunk, úgyhogy
 írunk saját Gulp modult, amit a pipe-ba téve kiíratjuk, hogy összesen
 hány karakter van a `.ts` fájljainkban.
 
+## Következő fejezet
 
+A https://groups.google.com/forum/#!forum/nodejs-typescript-angular-course levlistára
+írok majd mindig, amikor van új fejezet, vagy valamit nagyon átírtam.
 
 
 
