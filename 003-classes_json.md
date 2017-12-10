@@ -376,17 +376,8 @@ const x = [3, 7, 21];
 console.log(x.length);
 ```
 
-A programhoz nem kell semmilyen npm modul, de kell egy input fájl, valami ilyesmi:
-
-```
-{
-    "szam": 4,
-    "szoveg": "alma",
-    "gyerekObjektum": {
-	"x": 4
-    }
-}
-```
+A programhoz nem kell semmilyen npm modul, de kell egy input fájl, például a fenti valid JSON példa
+lehet a tartalma.
 
 A `node readjson.js minta.json` parancsnak 3-at kell kiírnia, ha jól írtuk meg
 a kódot.
