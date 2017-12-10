@@ -39,11 +39,29 @@ egy darabig `NodeJS`-re írjuk a programjainkat, csak később böngészőre.
 A Typescript egy olyan Javascript jellegű nyelv, amelyik típusokat ad
 a Javascript-hez. Ez a modern Angular nyelve, ezt is meg kell ismernünk.
 
-## [2 - Callbacks](002-callbacks.md)
+## [2 - Callback függvények](002-callbacks.md)
 
 Egy fejezet a callback-ekről. Egy végtelenül fontos téma, a modern Javascript
 programozásának az alapja, hogy a callback-ekkel és az aszinkron API-k
 használatátával megbarátkozz.
+
+## [3 - Objektumok, osztályok, JSON](003-classes_json.md)
+
+Egy igazán minimális bevezető a Javascript objektum-rendszerébe. A pre-ES6-os
+rendszer felvillantása után a Typescript-es és az ES6-os szintaktikát nézzük
+meg. Megnézzük, hogy mi az a JSON, és beolvasunk egy JSON fájlt, Javascript-ben
+és Typescript-ben is.
+
+## [4 - Gulp](004-gulp.md)
+
+A [Gulp](https://github.com/gulpjs/gulp/blob/master/docs/API.md) egy
+igazán elterjedt program, amit nagyjából a `make` helyett használnak.
+Ahhoz, hogy igazán értsük mi is az, kicsit el kell vele játszanunk, úgyhogy
+írunk saját Gulp modult, amit a pipe-ba téve kiíratjuk, hogy összesen
+hány karakter van a `.ts` fájljainkban.
+
+
+
 
 
 

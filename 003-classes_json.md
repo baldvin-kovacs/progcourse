@@ -1,4 +1,4 @@
-# 3 - Object, Classes, JSON
+# 3 - Objektumok, osztályok, JSON
 
 ## Objektumok a Javascript-ben
 
