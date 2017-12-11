@@ -67,8 +67,12 @@ A https://groups.google.com/forum/#!forum/nodejs-typescript-angular-course levli
 
 # TODO
 
-- Modulok, Böngésző
+- Promise-ok, és azzal primitív modultöltő.
+- Saját module bundler, kombinálva mások Gulpos megoldásaival.
 - Webpack
+- Angular
+- Jasmine, Protractor
+- Appendixnek Bower.
 
 
 
