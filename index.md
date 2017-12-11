@@ -70,6 +70,7 @@ A https://groups.google.com/forum/#!forum/nodejs-typescript-angular-course levli
 - Promise-ok, és azzal primitív modultöltő.
 - Saját module bundler, kombinálva mások Gulpos megoldásaival.
 - Webpack
+- RXJS
 - Angular
 - Jasmine, Protractor
 - Appendixnek Bower.
