@@ -65,6 +65,10 @@ hány karakter van a `.ts` fájljainkban.
 A https://groups.google.com/forum/#!forum/nodejs-typescript-angular-course levlistára
 írok majd mindig, amikor van új fejezet, vagy valamit nagyon átírtam.
 
+# TODO
+
+- Modulok, Böngésző
+- Webpack
 
 
 
