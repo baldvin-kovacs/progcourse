@@ -60,6 +60,14 @@ Ahhoz, hogy igazán értsük mi is az, kicsit el kell vele játszanunk, úgyhogy
 írunk saját Gulp modult, amit a pipe-ba téve kiíratjuk, hogy összesen
 hány karakter van a `.ts` fájljainkban.
 
+## [5 - Promise-ok](005-promises.md)
+
+A `Promise` egy nagyon elterjedt módszere az aszinkron programozásnak. Ez
+a fejezet a callback-ekről szóló 2. fejezet folytatása. Igazán fontos, ennek
+a megértése nélkül sok kódot reménytelen lesz olvasnunk, sőt, a [modern
+AJAX apik](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API)
+már ezzel a módszerrel kínálják a szolgáltatásaikat.
+
 ## Következő fejezet
 
 A https://groups.google.com/forum/#!forum/nodejs-typescript-angular-course levlistára
@@ -67,7 +75,6 @@ A https://groups.google.com/forum/#!forum/nodejs-typescript-angular-course levli
 
 # TODO
 
-- Promise-ok, és azzal primitív modultöltő.
 - Saját module bundler, kombinálva mások Gulpos megoldásaival.
 - Webpack
 - RXJS

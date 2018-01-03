@@ -1,0 +1,95 @@
+fs = require('fs');
+process = require('process');
+
+class SimplePromise {
+    constructor(f) {
+        this.rejected = false;
+        this.result = null;
+        this.done = false;
+        this.rejected = false;
+        this.f = f;
+        this.next = null;
+
+        const resolve = (result) => {
+            this.result = result;
+            this.done = true;
+            if (this.next) {
+                this.next();
+            }
+        };
+
+        const reject = (error) => {
+            this.result = error;
+            this.failed = true;
+            this.done = true;
+            if (this.next) {
+                this.next();
+            }
+        };
+
+        const execute = () => {
+            f(resolve, reject);
+        };
+
+        setTimeout(execute, 0);
+    }
+
+    then(f) {
+        return new SimplePromise((resolve, reject) => {
+            const doit = () => {
+                if (this.failed) {
+                    reject(this.result);
+                    return;
+                }
+                try {
+                    const result = f(this.result);
+                    resolve(result);
+                } catch (e) {
+                    reject(e);
+                }
+            };
+            if (!this.done) {
+                this.next = doit;
+                return;
+            }
+            doit();
+        });
+    }
+}
+
+function writeTheFile(data) {
+    return new SimplePromise(resolve, reject) {
+        fs.writeFile(process.argv[4], (err, data) => {
+            if (err) {
+                reject(err);
+                return;
+            }
+            resolve();
+        })
+    }
+}
+
+function xorTheData(data) {
+    for (let i = 1; i < data.length; i++) {
+        if (data[i] > 65 && data[i] < 122) {
+            data[i] = ((data[i] - 65) + 1) % 57 + 65;
+        }
+    }
+    return data;
+}
+
+function readTheFile() {
+    return new SimplePromise(resolve, reject) {
+        fs.readFile(process.argv[3], (err, data) => {
+            if (err) {
+                reject(err);
+                return;
+            }
+            resolve(data);
+        });
+    }
+}
+
+readTheFile()
+    .then(xorTheData)
+    .then(writeTheFile);
